@@ -19,9 +19,9 @@ public class Circulation {
 
     public FlowPath findPathBfs(FlowGraph g, int startNode){
         Deque<Integer> flowValues = new ArrayDeque<>();
-
-        int[] previous = new int[g.size()];
+        FlowPath fp = new FlowPath();
         Deque<Integer> q = new ArrayDeque<>();
+        int[] previous = new int[g.size()];
         previous[startNode] = -2;
         q.push(startNode);
         while(!q.isEmpty()){
@@ -29,14 +29,11 @@ public class Circulation {
             Iterator<Integer> edgeIterator = g.getEdgeIteratorForNode(nodeNumber);
             while(edgeIterator.hasNext()){
                 Edge nextEdge = g.getEdge(edgeIterator.next());
-
-
-
                 Integer nextNode = nextEdge.getTo();
                 if(nextNode==startNode){
 
                     //FIXME: q is a queue of nodes, flowpath is a queue of edges right now. can I change flowpath to queue of nodes?
-                    return drawPathFromStepBack(previous, nextNode);
+                    fp = drawPathFromStepBack(previous, nextNode);
                 }
 
                 if(previous[nextNode]<0){
@@ -48,7 +45,7 @@ public class Circulation {
         //if there is no path; shouldn't happen
         return new FlowPath();
     }
-    
+
     public FlowPath drawPathFromStepBack(int[] previous, int lastNode){
         FlowPath fp = new FlowPath();
         // TODO: 3/20/18 step backwards through previous and draw path
