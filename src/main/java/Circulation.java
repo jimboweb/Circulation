@@ -4,6 +4,8 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Circulation {
+    // TODO: 3/21/18 build the modified graph with no minimums 
+    
     FastScanner scanner;
 
     public Circulation(){
