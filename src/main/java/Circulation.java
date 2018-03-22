@@ -4,12 +4,23 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Circulation {
-    // TODO: 3/21/18 build the modified graph with no minimums 
-    
+    // TODO: 3/21/18 build the modified graph with no minimums
     FastScanner scanner;
 
     public Circulation(){
         scanner = new FastScanner();
+    }
+
+    public FlowGraph simplifyFlowGraph(FlowGraph originalGraph){
+        FlowGraph newGraph = originalGraph.copy();
+        Iterator<Edge> edgeIterator = originalGraph.getEdgeIteratorForGraph();
+        while(edgeIterator.hasNext()){
+            Edge nextEdge = edgeIterator.next();
+            int edgeMin = nextEdge.getMinCapacity();
+            if(edgeMin>0){
+                nextEdge.changeCapacity(-edgeMin);
+            }
+        }
     }
 
     public void findCirculation(Inputter input, Outputter output){
@@ -121,6 +132,38 @@ public class Circulation {
         public int getFlow() {
             return flow;
         }
+
+        public void setMinCapacity(int minCapacity) {
+            this.minCapacity = minCapacity;
+        }
+
+        public void setFrom(int from) {
+            this.from = from;
+        }
+
+        public void setTo(int to) {
+            this.to = to;
+        }
+
+        public void setCapacity(int capacity) {
+            this.capacity = capacity;
+        }
+
+        public void setFlow(int flow) {
+            this.flow = flow;
+        }
+
+        public void setIndex(int index) {
+            this.index = index;
+        }
+
+        public void changeCapacity(int amount){
+            capacity+=amount;
+        }
+
+        public void changeMinCapacity(int amount){
+            minCapacity+=amount;
+        }
     }
 
     static class FlowGraph {
@@ -130,8 +173,12 @@ public class Circulation {
         /* These adjacency lists store only indices of edges from the edges list */
         private List<Integer>[] graph;
 
+        private int[] demand;
+
         public FlowGraph(int n) {
             this.graph = (ArrayList<Integer>[])new ArrayList[n];
+            demand = new int[n];
+            Arrays.fill(demand,0);
             for (int i = 0; i < n; ++i)
                 this.graph[i] = new ArrayList<>();
             this.edges = new ArrayList<>();
@@ -182,6 +229,25 @@ public class Circulation {
 
         public Iterator<Integer> getEdgeIteratorForNode(int node){
             return graph[node].iterator();
+        }
+
+        public Iterator<Edge> getEdgeIteratorForGraph(){
+            return edges.iterator();
+        }
+
+        public FlowGraph copy(){
+            FlowGraph copy = new FlowGraph(size());
+            copy.edges = edges;
+            copy.graph = graph;
+            return copy;
+        }
+
+        public void setNodeDemand(int node, int amount){
+            demand[node] = amount;
+        }
+
+        public void changeNodeDemand(int node, int amount){
+            demand[node]+=amount;
         }
     }
 
