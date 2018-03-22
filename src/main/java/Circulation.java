@@ -1,5 +1,3 @@
-import com.sun.javafx.geom.Edge;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,41 +12,66 @@ public class Circulation {
 
     public void findCirculation(Inputter input, Outputter output){
         FlowGraph graph = buildGraph(input);
-
+        FlowPath fp = findPathBfs(graph,0, 0);
+        while(!fp.isEmpty()){
+            System.out.print(fp.pop() + " ");
+        }
+        System.out.println();
     }
 
-    public FlowPath findPathBfs(FlowGraph g, int startNode){
-        Deque<Integer> flowValues = new ArrayDeque<>();
+    public FlowPath findPathBfs(FlowGraph graph, int startNode, int endNode){
         FlowPath fp = new FlowPath();
-        Deque<Integer> q = new ArrayDeque<>();
-        int[] previous = new int[g.size()];
-        previous[startNode] = -2;
-        q.push(startNode);
-        while(!q.isEmpty()){
-            int nodeNumber = q.pop();
-            Iterator<Integer> edgeIterator = g.getEdgeIteratorForNode(nodeNumber);
+        Deque<Integer> nodeQueue = new ArrayDeque<>();
+        int[] incomingEdgeOnPath = new int[graph.size()];
+        Arrays.fill(incomingEdgeOnPath,-1);
+        incomingEdgeOnPath[startNode] = -2;
+        nodeQueue.push(startNode);
+        int lastNode = -1;
+        while(!nodeQueue.isEmpty() && lastNode == -1){
+            int nodeNumber = nodeQueue.pop();
+            Iterator<Integer> edgeIterator = graph.getEdgeIteratorForNode(nodeNumber);
             while(edgeIterator.hasNext()){
-                Edge nextEdge = g.getEdge(edgeIterator.next());
-                Integer nextNode = nextEdge.getTo();
-                if(nextNode==startNode){
-
-                    //FIXME: q is a queue of nodes, flowpath is a queue of edges right now. can I change flowpath to queue of nodes?
-                    fp = drawPathFromStepBack(previous, nextNode);
+                Edge nextEdge = graph.getEdge(edgeIterator.next());
+                if(nextEdge.getIndex()%2!=0){
+                    continue;
+                }
+                int nextNode = nextEdge.getTo();
+                if(nextNode==endNode){
+                    incomingEdgeOnPath[nextNode] = nextEdge.index;
+                    lastNode = nextNode;
+                    break;
                 }
 
-                if(previous[nextNode]<0){
-                    previous[nextNode] = nodeNumber;
-                    q.push(nextNode);
+                if(incomingEdgeOnPath[nextNode]<0){
+                    incomingEdgeOnPath[nextNode] = nextEdge.index;
+                    nodeQueue.push(nextNode);
                 }
             }
         }
-        //if there is no path; shouldn't happen
-        return new FlowPath();
+        fp = drawPathFromStepBack(incomingEdgeOnPath, lastNode, startNode, graph);
+        //if there is no path it will return an empty path; shouldn't happen
+        return fp;
     }
 
-    public FlowPath drawPathFromStepBack(int[] previous, int lastNode){
+    public FlowPath drawPathFromStepBack(int[] incomingEdgeOnPath, int lastNode, int startNode, FlowGraph graph){
         FlowPath fp = new FlowPath();
-        // TODO: 3/20/18 step backwards through previous and draw path
+        int previousEdgeNum = incomingEdgeOnPath[lastNode];
+        int maxFlow = Integer.MAX_VALUE;
+        while(previousEdgeNum>0) {
+            fp.push(previousEdgeNum);
+            Edge prevEdge = graph.getEdge(previousEdgeNum);
+            int prevFlow = prevEdge.getFlow();
+            if(prevFlow<maxFlow)
+            {
+                maxFlow = prevFlow;
+            }
+            lastNode = prevEdge.from;
+            if(lastNode==startNode){
+                break;
+            }
+            previousEdgeNum = incomingEdgeOnPath[lastNode];
+        }
+        fp.setFlow(maxFlow);
         return fp;
     }
 
@@ -160,7 +183,6 @@ public class Circulation {
         }
     }
 
-    // TODO: 3/20/18 probably change this to nodes
     static class FlowPath{
         Deque<Integer> edges;
         int flow = 0;
@@ -176,6 +198,14 @@ public class Circulation {
         }
         public int pop(){
             return edges.pop();
+        }
+
+        public void setFlow(int flow) {
+            this.flow = flow;
+        }
+
+        public boolean isEmpty(){
+            return edges.isEmpty();
         }
     }
 
@@ -206,7 +236,7 @@ public class Circulation {
             Input rtrn = new Input(n,m);
             for(int i=0;i<m;i++){
                 for(int j=0;j<4;j++){
-                    int num = scanner.nextInt();
+                    int num = (scanner.nextInt()-1);
                     rtrn.setData(num,i,j);
                 }
             }
@@ -248,7 +278,7 @@ public class Circulation {
         int[][] data;
         public Input(int n, int m){
             this.n=n;
-            data = new int[n][m];
+            data = new int[m][4];
         }
         public void setData(int num, int i, int j){
             data[i][j] = num;
