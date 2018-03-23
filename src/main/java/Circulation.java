@@ -1,3 +1,5 @@
+import com.sun.javafx.geom.Edge;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,7 +13,44 @@ public class Circulation {
         scanner = new FastScanner();
     }
 
+
+
     public FlowGraph simplifyFlowGraph(FlowGraph originalGraph){
+        FlowGraph newGraph = removeMinDemand(originalGraph);
+        newGraph = createSourceAndSink(newGraph);
+
+        return newGraph;
+    }
+
+    private FlowGraph createSourceAndSink(FlowGraph newGraph) {
+        int source = -1;
+        int sink = -1;
+        List<Integer> nodeDemand = new ArrayList<>();
+        Collections.copy(newGraph.getDemand(), nodeDemand);
+        for (int i = 0; i < nodeDemand.size(); i++) {
+            int demand = nodeDemand.get(i);
+            if(demand>0){
+                if (source < 0) {
+                    source = newGraph.addNode(demand);
+                } else {
+                    newGraph.changeNodeDemand(source, -demand);
+                }
+                newGraph.linkNodeToNode(source,i);
+                newGraph.setNodeDemand(i,0);
+            } else if (demand>0){
+                if(sink<0){
+                    sink = newGraph.addNode(demand);
+                } else {
+                    newGraph.changeNodeDemand(source,demand);
+                }
+                newGraph.linkNodeToNode(i,sink);
+                newGraph.setNodeDemand(i,0);
+            }
+        }
+        return newGraph;
+    }
+
+    private FlowGraph removeMinDemand(FlowGraph originalGraph) {
         FlowGraph newGraph = originalGraph.copy();
         Iterator<Edge> edgeIterator = originalGraph.getEdgeIteratorForGraph();
         while(edgeIterator.hasNext()){
@@ -174,16 +213,16 @@ public class Circulation {
         private List<Edge> edges;
 
         /* These adjacency lists store only indices of edges from the edges list */
-        private List<Integer>[] graph;
+        private List<List<Integer>> graph;
 
-        private int[] demand;
+        private List<Integer> demand;
 
         public FlowGraph(int n) {
-            this.graph = (ArrayList<Integer>[])new ArrayList[n];
-            demand = new int[n];
-            Arrays.fill(demand,0);
+            this.graph = new ArrayList<>(n);
+            demand = new ArrayList<>();
+            Collections.fill(demand,0);
             for (int i = 0; i < n; ++i)
-                this.graph[i] = new ArrayList<>();
+                this.graph.set(i, new ArrayList());
             this.edges = new ArrayList<>();
         }
 
@@ -201,18 +240,14 @@ public class Circulation {
             int forwardEdgeIndex = edges.size();
             Edge forwardEdge = new Edge(from, to, capacity, minCapacity, forwardEdgeIndex);
             Edge backwardEdge = new Edge(to, from, 0, minCapacity, forwardEdgeIndex + 1);
-            graph[from].add(edges.size());
+            graph.get(from).add(edges.size());
             edges.add(forwardEdge);
-            graph[to].add(edges.size());
+            graph.get(to).add(edges.size());
             edges.add(backwardEdge);
         }
 
         public int size() {
-            return graph.length;
-        }
-
-        public List<Integer> getIds(int from) {
-            return graph[from];
+            return graph.size();
         }
 
         public Edge getEdge(int id) {
@@ -231,7 +266,7 @@ public class Circulation {
         }
 
         public Iterator<Integer> getEdgeIteratorForNode(int node){
-            return graph[node].iterator();
+            return graph.get(node).iterator();
         }
 
         public Iterator<Edge> getEdgeIteratorForGraph(){
@@ -246,11 +281,27 @@ public class Circulation {
         }
 
         public void setNodeDemand(int node, int amount){
-            demand[node] = amount;
+            demand.set(node, amount);
         }
 
         public void changeNodeDemand(int node, int amount){
-            demand[node]+=amount;
+            demand.set(node, demand.get(node) + amount);
+        }
+
+        public int addNode(int d){
+            int nodeNumber = size();
+            List<Integer> newNode = new ArrayList<>();
+            graph.add(newNode);
+            demand.add(d);
+            return nodeNumber;
+        }
+
+        public List<Integer> getDemand(){
+            return demand;
+        }
+
+        public void linkNodeToNode(int from, int to){
+            graph.get(from).add(to);
         }
     }
 
