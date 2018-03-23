@@ -19,8 +19,11 @@ public class Circulation {
             int edgeMin = nextEdge.getMinCapacity();
             if(edgeMin>0){
                 nextEdge.changeCapacity(-edgeMin);
+                newGraph.changeNodeDemand(nextEdge.getFrom(), edgeMin);
+                newGraph.changeNodeDemand(nextEdge.getTo(), -edgeMin);
             }
         }
+        return newGraph;
     }
 
     public void findCirculation(Inputter input, Outputter output){
