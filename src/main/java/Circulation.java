@@ -6,15 +6,26 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Circulation {
-    // TODO: 3/21/18 build the modified graph with no minimums
     FastScanner scanner;
 
     public Circulation(){
         scanner = new FastScanner();
     }
 
+    public void findCirculation(Inputter input, Outputter output){
+        FlowGraph graph = buildGraph(input);
+        FlowPath fp = findPathBfs(graph,0, 0);
+        graph = simplifyFlowGraph(graph);
 
+    }
 
+    // FIXME: 3/25/18 need to just do this for even edges
+    // TODO: 3/25/18 I can do this all in the createGraph method faster probably
+    /**
+     * remove minimum demand and replace with demands on nodes
+     * @param originalGraph
+     * @return
+     */
     public FlowGraph simplifyFlowGraph(FlowGraph originalGraph){
         FlowGraph newGraph = removeMinDemand(originalGraph);
         newGraph = createSourceAndSink(newGraph);
@@ -53,25 +64,21 @@ public class Circulation {
     private FlowGraph removeMinDemand(FlowGraph originalGraph) {
         FlowGraph newGraph = originalGraph.copy();
         Iterator<Edge> edgeIterator = originalGraph.getEdgeIteratorForGraph();
-        while(edgeIterator.hasNext()){
-            Edge nextEdge = edgeIterator.next();
-            int edgeMin = nextEdge.getMinCapacity();
+        List<Edge> edges = originalGraph.getEdges();
+        //only loop over the even numbers
+       for(int i=0;i<edges.size();i+=2){
+            Edge originalGraphEdge = originalGraph.getEdge(i);
+            Edge newGraphForwardEdge = newGraph.getEdge(i);
+            Edge newGraphBackwardEdge = newGraph.getEdge(i+1);
+            int edgeMin = originalGraphEdge.getMinCapacity();
             if(edgeMin>0){
-                nextEdge.changeCapacity(-edgeMin);
-                newGraph.changeNodeDemand(nextEdge.getFrom(), edgeMin);
-                newGraph.changeNodeDemand(nextEdge.getTo(), -edgeMin);
+                newGraphForwardEdge.changeCapacity(-edgeMin);
+                newGraphBackwardEdge.changeCapacity(-edgeMin);
+                newGraph.changeNodeDemand(originalGraphEdge.getFrom(), edgeMin);
+                newGraph.changeNodeDemand(originalGraphEdge.getTo(), -edgeMin);
             }
         }
         return newGraph;
-    }
-
-    public void findCirculation(Inputter input, Outputter output){
-        FlowGraph graph = buildGraph(input);
-        FlowPath fp = findPathBfs(graph,0, 0);
-        while(!fp.isEmpty()){
-            System.out.print(fp.pop() + " ");
-        }
-        System.out.println();
     }
 
     public FlowPath findPathBfs(FlowGraph graph, int startNode, int endNode){
@@ -208,6 +215,9 @@ public class Circulation {
         }
     }
 
+    /**
+     * A graph with an array of edges and a list of integer node links to edges
+     */
     static class FlowGraph {
         /* List of all - forward and backward - edges */
         private List<Edge> edges;
@@ -217,12 +227,18 @@ public class Circulation {
 
         private List<Integer> demand;
 
+        /**
+         * create a graph with n nodes
+         * @param n
+         */
         public FlowGraph(int n) {
             this.graph = new ArrayList<>(n);
             demand = new ArrayList<>();
-            Collections.fill(demand,0);
+            for(int i=0;i<n;i++){
+                demand.add(0);
+            }
             for (int i = 0; i < n; ++i)
-                this.graph.set(i, new ArrayList());
+                this.graph.add(new ArrayList());
             this.edges = new ArrayList<>();
         }
 
@@ -246,6 +262,9 @@ public class Circulation {
             edges.add(backwardEdge);
         }
 
+        /**
+         * @return size of node list
+         */
         public int size() {
             return graph.size();
         }
@@ -273,6 +292,10 @@ public class Circulation {
             return edges.iterator();
         }
 
+        /**
+         * create graph with same number of nodes and same edges
+         * @return copy of graph
+         */
         public FlowGraph copy(){
             FlowGraph copy = new FlowGraph(size());
             copy.edges = edges;
@@ -303,11 +326,19 @@ public class Circulation {
         public void linkNodeToNode(int from, int to){
             graph.get(from).add(to);
         }
+
+        public List<Edge> getEdges() {
+            return edges;
+        }
     }
 
+    /**
+     * A path through the edges of the graph
+     * @param flow - the flow of the path
+     */
     static class FlowPath{
-        Deque<Integer> edges;
-        int flow = 0;
+        private Deque<Integer> edges;
+        private int flow = 0;
         public FlowPath(){
             edges = new ArrayDeque<>();
         }
@@ -315,13 +346,27 @@ public class Circulation {
             this.edges=edges;
             this.flow=flow;
         }
+
+        /**
+         * push to edges queue
+         * @param edge
+         */
         public void push(int edge){
             edges.push(edge);
         }
+
+        /**
+         * pop from edges queue
+         * @return the last edge (and delete it)
+         */
         public int pop(){
             return edges.pop();
         }
 
+        /**
+         * set the flow
+         * @param flow
+         */
         public void setFlow(int flow) {
             this.flow = flow;
         }
