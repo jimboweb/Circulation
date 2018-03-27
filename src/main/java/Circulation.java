@@ -19,7 +19,6 @@ public class Circulation {
 
     }
 
-    // FIXME: 3/25/18 need to just do this for even edges
     // TODO: 3/25/18 I can do this all in the createGraph method faster probably
     /**
      * remove minimum demand and replace with demands on nodes
@@ -36,8 +35,7 @@ public class Circulation {
     private FlowGraph createSourceAndSink(FlowGraph newGraph) {
         int source = -1;
         int sink = -1;
-        List<Integer> nodeDemand = new ArrayList<>();
-        Collections.copy(newGraph.getDemand(), nodeDemand);
+        List<Integer> nodeDemand = new ArrayList<>(newGraph.getDemand());
         for (int i = 0; i < nodeDemand.size(); i++) {
             int demand = nodeDemand.get(i);
             if(demand>0){
@@ -48,7 +46,7 @@ public class Circulation {
                 }
                 newGraph.linkNodeToNode(source,i);
                 newGraph.setNodeDemand(i,0);
-            } else if (demand>0){
+            } else if (demand<0){
                 if(sink<0){
                     sink = newGraph.addNode(demand);
                 } else {
@@ -298,8 +296,14 @@ public class Circulation {
          */
         public FlowGraph copy(){
             FlowGraph copy = new FlowGraph(size());
-            copy.edges = edges;
-            copy.graph = graph;
+            copy.edges = new ArrayList<>(edges);
+            copy.graph = new ArrayList<>();
+            copy.demand = new ArrayList<>(demand);
+            Collections.copy(edges, copy.edges);
+            for(List<Integer> node:graph){
+                List<Integer> copyNode = new ArrayList<>(node);
+                copy.graph.add(copyNode);
+            }
             return copy;
         }
 
@@ -403,7 +407,7 @@ public class Circulation {
             Input rtrn = new Input(n,m);
             for(int i=0;i<m;i++){
                 for(int j=0;j<4;j++){
-                    int num = (scanner.nextInt()-1);
+                    int num = (scanner.nextInt());
                     rtrn.setData(num,i,j);
                 }
             }
@@ -448,7 +452,11 @@ public class Circulation {
             data = new int[m][4];
         }
         public void setData(int num, int i, int j){
-            data[i][j] = num;
+            if(j<2){
+                data[i][j] = num - 1;
+            } else {
+                data[i][j] = num;
+            }
         }
 
         public int getN() {
