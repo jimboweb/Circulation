@@ -39,24 +39,33 @@ public class Circulation {
         for (int i = 0; i < nodeDemand.size(); i++) {
             int demand = nodeDemand.get(i);
             if(demand>0){
-                if (source < 0) {
-                    source = newGraph.addNode(demand);
-                } else {
-                    newGraph.changeNodeDemand(source, -demand);
-                }
-                newGraph.linkNodeToNode(source,i);
-                newGraph.setNodeDemand(i,0);
+                source = getSourceOrSink(newGraph, source, i, demand);
             } else if (demand<0){
-                if(sink<0){
-                    sink = newGraph.addNode(demand);
-                } else {
-                    newGraph.changeNodeDemand(source,demand);
-                }
-                newGraph.linkNodeToNode(i,sink);
-                newGraph.setNodeDemand(i,0);
+                sink = getSourceOrSink(newGraph, sink, i, demand);
             }
         }
         return newGraph;
+    }
+
+    // FIXME: 3/29/18 (Priority 3) side effects: changes the state of the graph. Can fix this by making source/sink a property of graph
+    /**
+     * sets a source or sink, links to demand node and removes deman
+     * @param newGraph
+     * @param sourceOrSink
+     * @param i
+     * @param demand
+     * @return the number of the source or sink
+     * 
+     */
+    private int getSourceOrSink(FlowGraph newGraph, int sourceOrSink, int i, int demand) {
+        if (sourceOrSink < 0) {
+            sourceOrSink = newGraph.addNode(demand);
+        } else {
+            newGraph.changeNodeDemand(sourceOrSink, demand);
+        }
+        newGraph.linkNodeToNode(sourceOrSink,i);
+        newGraph.setNodeDemand(i,0);
+        return sourceOrSink;
     }
 
     private FlowGraph removeMinDemand(FlowGraph originalGraph) {
