@@ -14,8 +14,9 @@ public class Circulation {
 
     public void findCirculation(Inputter input, Outputter output){
         FlowGraph graph = buildGraph(input);
-        FlowPath fp = findPathBfs(graph,0, 0);
         graph = simplifyFlowGraph(graph);
+        FlowPath fp = findPathBfs(graph,graph.getSource(), graph.getSink());
+
 
     }
 
@@ -28,26 +29,23 @@ public class Circulation {
     public FlowGraph simplifyFlowGraph(FlowGraph originalGraph){
         FlowGraph newGraph = removeMinDemand(originalGraph);
         newGraph = createSourceAndSink(newGraph);
-
         return newGraph;
     }
 
+    // TODO: 4/2/18 add edges to source and sink 
     private FlowGraph createSourceAndSink(FlowGraph newGraph) {
-        int source = -1;
-        int sink = -1;
         List<Integer> nodeDemand = new ArrayList<>(newGraph.getDemand());
         for (int i = 0; i < nodeDemand.size(); i++) {
             int demand = nodeDemand.get(i);
             if(demand>0){
-                source = getSourceOrSink(newGraph, source, i, demand);
+                newGraph.setSource(getSourceOrSink(newGraph, true, i, demand));
             } else if (demand<0){
-                sink = getSourceOrSink(newGraph, sink, i, demand);
+                newGraph.setSink(getSourceOrSink(newGraph, false, i, demand));
             }
         }
         return newGraph;
     }
 
-    // FIXME: 3/29/18 (Priority 3) side effects: changes the state of the graph. Can fix this by making source/sink a property of graph
     /**
      * sets a source or sink, links to demand node and removes deman
      * @param newGraph
@@ -57,13 +55,14 @@ public class Circulation {
      * @return the number of the source or sink
      * 
      */
-    private int getSourceOrSink(FlowGraph newGraph, int sourceOrSink, int i, int demand) {
+    private int getSourceOrSink(FlowGraph newGraph, boolean source, int i, int demand) {
+        int sourceOrSink = source?newGraph.getSource():newGraph.getSink();
         if (sourceOrSink < 0) {
             sourceOrSink = newGraph.addNode(demand);
         } else {
             newGraph.changeNodeDemand(sourceOrSink, demand);
         }
-        newGraph.linkNodeToNode(sourceOrSink,i);
+        newGraph.linkNodeToNode(sourceOrSink,i,0,demand);
         newGraph.setNodeDemand(i,0);
         return sourceOrSink;
     }
@@ -156,11 +155,11 @@ public class Circulation {
     static class Edge {
         private int from, to, capacity, minCapacity, flow, index;
 
-        public Edge(int from, int to, int capacity, int minCapacity, int index) {
+        public Edge(int from, int to, int minCapacity, int capacity, int index) {
             this.from = from;
             this.to = to;
-            this.capacity = capacity;
             this.minCapacity = minCapacity;
+            this.capacity = capacity;
             this.flow = 0;
             this.index = index;
         }
@@ -228,11 +227,28 @@ public class Circulation {
     static class FlowGraph {
         /* List of all - forward and backward - edges */
         private List<Edge> edges;
-
+        private int source = -1;
+        private int sink = -1;
         /* These adjacency lists store only indices of edges from the edges list */
         private List<List<Integer>> graph;
 
         private List<Integer> demand;
+
+        public void setSource(int source) {
+            this.source = source;
+        }
+
+        public void setSink(int sink) {
+            this.sink = sink;
+        }
+
+        public int getSource() {
+            return source;
+        }
+
+        public int getSink() {
+            return sink;
+        }
 
         /**
          * create a graph with n nodes
@@ -256,13 +272,13 @@ public class Circulation {
          * @param to edge to
          * @param capacity
          */
-        public void addEdge(int from, int to, int capacity, int minCapacity) {
+        public void addEdge(int from, int to, int minCapacity, int capacity) {
             /* Note that we first append a forward edge and then a backward edge,
              * so all forward edges are stored at even indices (starting from 0),
              * whereas backward edges are stored at odd indices. */
             int forwardEdgeIndex = edges.size();
-            Edge forwardEdge = new Edge(from, to, capacity, minCapacity, forwardEdgeIndex);
-            Edge backwardEdge = new Edge(to, from, 0, minCapacity, forwardEdgeIndex + 1);
+            Edge forwardEdge = new Edge(from, to, minCapacity, capacity, forwardEdgeIndex);
+            Edge backwardEdge = new Edge(to, from, minCapacity, capacity, forwardEdgeIndex + 1);
             graph.get(from).add(edges.size());
             edges.add(forwardEdge);
             graph.get(to).add(edges.size());
@@ -336,8 +352,11 @@ public class Circulation {
             return demand;
         }
 
-        public void linkNodeToNode(int from, int to){
-            graph.get(from).add(to);
+        // FIXME: 4/2/18 this is wrong. the nodes are the outgoing edges, not the other nodes.
+        public void linkNodeToNode(int from, int to, int minCapacity, int capacity){
+            addEdge(from,to,minCapacity,capacity);
+            graph.get(from).add(edges.size()-1);
+            graph.get(to).add(edges.size()-1);
         }
 
         public List<Edge> getEdges() {
