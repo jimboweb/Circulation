@@ -15,9 +15,10 @@ public class Circulation {
     public void findCirculation(Inputter input, Outputter output){
         FlowGraph graph = buildGraph(input);
         graph = simplifyFlowGraph(graph);
-        FlowPath fp = findPathBfs(graph,graph.getSource(), graph.getSink());
-
-
+//        FlowPath fp = findPathBfs(graph,graph.getSource(), graph.getSink());
+        int[][] arrayGraph = flowGraphToArray(graph);
+        int maxFlow = findMaxFlow(arrayGraph,graph.source,graph.sink);
+        System.out.println("Maxflow = " + maxFlow);
     }
 
     // TODO: 3/25/18 I can do this all in the createGraph method faster probably
@@ -62,7 +63,11 @@ public class Circulation {
         } else {
             newGraph.changeNodeDemand(sourceOrSink, demand);
         }
-        newGraph.linkNodeToNode(sourceOrSink,i,0,demand);
+        if(source) {
+            newGraph.linkNodeToNode(sourceOrSink, i, 0, demand);
+        } else {
+            newGraph.linkNodeToNode(i, sourceOrSink,  0, -demand);
+        }
         newGraph.setNodeDemand(i,0);
         return sourceOrSink;
     }
@@ -87,7 +92,7 @@ public class Circulation {
         return newGraph;
     }
 
-    public FlowPath findPathBfs(FlowGraph graph, int startNode, int endNode){
+    private FlowPath findPathBfs(FlowGraph graph, int startNode, int endNode){
         FlowPath fp = new FlowPath();
         Deque<Integer> nodeQueue = new ArrayDeque<>();
         int[] incomingEdgeOnPath = new int[graph.size()];
@@ -121,7 +126,7 @@ public class Circulation {
         return fp;
     }
 
-    public FlowPath drawPathFromStepBack(int[] incomingEdgeOnPath, int lastNode, int startNode, FlowGraph graph){
+    private FlowPath drawPathFromStepBack(int[] incomingEdgeOnPath, int lastNode, int startNode, FlowGraph graph){
         FlowPath fp = new FlowPath();
         int previousEdgeNum = incomingEdgeOnPath[lastNode];
         int maxFlow = Integer.MAX_VALUE;
@@ -143,7 +148,7 @@ public class Circulation {
         return fp;
     }
 
-    public FlowGraph buildGraph(Inputter input){
+    private FlowGraph buildGraph(Inputter input){
         FlowGraph graph = new FlowGraph(input.getN());
         int[][] data = input.getData();
         for(int[] dataRow:data){
@@ -250,6 +255,10 @@ public class Circulation {
             return sink;
         }
 
+        public List<Integer> getNode(int index){
+            return graph.get(index);
+        }
+
         /**
          * create a graph with n nodes
          * @param n
@@ -352,7 +361,6 @@ public class Circulation {
             return demand;
         }
 
-        // FIXME: 4/2/18 this is wrong. the nodes are the outgoing edges, not the other nodes.
         public void linkNodeToNode(int from, int to, int minCapacity, int capacity){
             addEdge(from,to,minCapacity,capacity);
             graph.get(from).add(edges.size()-1);
@@ -408,6 +416,85 @@ public class Circulation {
         }
     }
 
+
+    private int[][] flowGraphToArray(FlowGraph flowGraph){
+        int numVertices = flowGraph.graph.size();
+        int[][] rtrn = new int[numVertices][numVertices];
+        for(int i=0;i<flowGraph.size();i++){
+            List<Integer> node = flowGraph.getNode(i);
+            for(int edgeNum:node){
+                Edge edge = flowGraph.getEdge(edgeNum);
+                rtrn[i][edge.getTo()]=edge.getCapacity();
+            }
+        }
+    return rtrn;
+    }
+
+    private int findMaxFlow(int[][] mainGraph, int s, int t){
+        int u;
+        int v;
+        int numVertices = mainGraph.length;
+
+        int[][] reverseGraph = new int[numVertices][numVertices];
+        for(u=0;u<numVertices;u++){
+            reverseGraph[u] = Arrays.copyOf(mainGraph[u],numVertices);
+        }
+
+        int parent[] = new int[numVertices];
+
+        int maxFlow = 0;
+
+        while (breadthFirstSearch(reverseGraph,s,t,parent)){
+            int pathFlow = Integer.MAX_VALUE;
+
+            v = t;
+            while(v!=s){
+                u=parent[v];
+                pathFlow = Math.min(pathFlow, reverseGraph[u][v]);
+                v=u;
+            }
+
+            v=t;
+            while(v!=s){
+                u=parent[v];
+                reverseGraph[u][v] -= maxFlow;
+                reverseGraph[v][u] += maxFlow;
+                v=u;
+            }
+
+            maxFlow += pathFlow;
+        }
+
+        return maxFlow;
+
+    }
+
+    private boolean breadthFirstSearch(int[][] reverseGraph, int s, int t, int[] parent){
+        int numVertices = reverseGraph.length;
+        boolean visited[] = new boolean[numVertices];
+        Arrays.fill(visited,false);
+
+        Deque<Integer> queue = new ArrayDeque<>();
+
+        queue.add(s);
+        visited[s] = true;
+        parent[s] = -1;
+
+        while(!queue.isEmpty()) {
+            int u = queue.poll();
+
+            for(int v=0;v<numVertices;v++){
+                if(!visited[v] && reverseGraph[u][v]>0){
+                    queue.add(v);
+                    parent[v]=u;
+                    visited[v] = true;
+                }
+            }
+
+        }
+
+        return visited[t];
+    }
 
 
 
