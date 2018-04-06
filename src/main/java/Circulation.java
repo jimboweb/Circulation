@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+// TODO: 4/6/18 rewrite input function so it creates array graph from beginning
+
+
 public class Circulation {
     FastScanner scanner;
 
@@ -33,7 +36,6 @@ public class Circulation {
         return newGraph;
     }
 
-    // TODO: 4/2/18 add edges to source and sink 
     private FlowGraph createSourceAndSink(FlowGraph newGraph) {
         List<Integer> nodeDemand = new ArrayList<>(newGraph.getDemand());
         for (int i = 0; i < nodeDemand.size(); i++) {
@@ -464,7 +466,7 @@ public class Circulation {
                 reverseGraph[v][u] += pathFlow;
                 v = u;
             }
-
+// TODO: 4/6/18 figure out how to apply pathFlow to correct edge here             
             maxFlow += pathFlow;
         }
 
