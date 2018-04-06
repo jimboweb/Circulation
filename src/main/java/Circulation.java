@@ -423,6 +423,9 @@ public class Circulation {
         for(int i=0;i<flowGraph.size();i++){
             List<Integer> node = flowGraph.getNode(i);
             for(int edgeNum:node){
+                if(edgeNum%2!=0){
+                    continue;
+                }
                 Edge edge = flowGraph.getEdge(edgeNum);
                 rtrn[i][edge.getTo()]=edge.getCapacity();
             }
@@ -454,12 +457,12 @@ public class Circulation {
                 v=u;
             }
 
-            v=t;
+            v = t;
             while(v!=s){
-                u=parent[v];
-                reverseGraph[u][v] -= maxFlow;
-                reverseGraph[v][u] += maxFlow;
-                v=u;
+                u = parent[v];
+                reverseGraph[u][v] -= pathFlow;
+                reverseGraph[v][u] += pathFlow;
+                v = u;
             }
 
             maxFlow += pathFlow;

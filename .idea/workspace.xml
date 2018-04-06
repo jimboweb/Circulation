@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61f0e230-7296-4c32-a9cc-4e92ee6825bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Circulation.java" afterPath="$PROJECT_DIR$/src/main/java/Circulation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,14 +58,16 @@
       <file leaf-file-name="Circulation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Circulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="450" column="0" lean-forward="false" selection-start-line="450" selection-start-column="0" selection-end-line="450" selection-end-column="0" />
+            <state relative-caret-position="269">
+              <caret line="463" column="46" lean-forward="false" selection-start-line="463" selection-start-column="46" selection-end-line="463" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#findCirculation#0;class#Circulation#0" expanded="false" />
                 <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
                 <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
                 <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
                 <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
+                <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
                 <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
                 <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
                 <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
@@ -140,23 +141,22 @@
                 <element signature="e#13070#13071#0" expanded="true" />
                 <element signature="e#13116#13117#0" expanded="true" />
                 <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
-                <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
-                <element signature="e#15303#15304#0" expanded="true" />
-                <element signature="e#15342#15343#0" expanded="true" />
+                <element signature="e#15393#15394#0" expanded="true" />
+                <element signature="e#15432#15433#0" expanded="true" />
                 <element signature="method#run#0;class#Circulation#0" expanded="false" />
                 <element signature="method#input#0;class#Circulation#0" expanded="false" />
                 <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
                 <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-                <element signature="e#17110#17111#0" expanded="true" />
-                <element signature="e#17142#17143#0" expanded="true" />
-                <element signature="e#17178#17179#0" expanded="true" />
-                <element signature="e#17213#17214#0" expanded="true" />
+                <element signature="e#17200#17201#0" expanded="true" />
+                <element signature="e#17232#17233#0" expanded="true" />
+                <element signature="e#17268#17269#0" expanded="true" />
+                <element signature="e#17303#17304#0" expanded="true" />
                 <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
                 <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-                <element signature="e#17411#17412#0" expanded="true" />
-                <element signature="e#17456#17457#0" expanded="true" />
-                <element signature="e#17497#17498#0" expanded="true" />
-                <element signature="e#17544#17545#0" expanded="true" />
+                <element signature="e#17501#17502#0" expanded="true" />
+                <element signature="e#17546#17547#0" expanded="true" />
+                <element signature="e#17587#17588#0" expanded="true" />
+                <element signature="e#17634#17635#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -670,12 +670,12 @@
       <workItem from="1521490952660" duration="20913000" />
       <workItem from="1521843795085" duration="6580000" />
       <workItem from="1522153527848" duration="3598000" />
-      <workItem from="1522240073832" duration="20099000" />
+      <workItem from="1522240073832" duration="26018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51190000" />
+    <option name="totallyTimeSpent" value="57109000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -731,7 +731,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="177" />
+      <option name="time" value="199" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -746,10 +746,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#findCirculation#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
             <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
             <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
+            <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
             <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
             <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
@@ -823,23 +825,22 @@
             <element signature="e#13070#13071#0" expanded="true" />
             <element signature="e#13116#13117#0" expanded="true" />
             <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
-            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
-            <element signature="e#15303#15304#0" expanded="true" />
-            <element signature="e#15342#15343#0" expanded="true" />
+            <element signature="e#15393#15394#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
             <element signature="method#run#0;class#Circulation#0" expanded="false" />
             <element signature="method#input#0;class#Circulation#0" expanded="false" />
             <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
             <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17110#17111#0" expanded="true" />
-            <element signature="e#17142#17143#0" expanded="true" />
-            <element signature="e#17178#17179#0" expanded="true" />
-            <element signature="e#17213#17214#0" expanded="true" />
+            <element signature="e#17200#17201#0" expanded="true" />
+            <element signature="e#17232#17233#0" expanded="true" />
+            <element signature="e#17268#17269#0" expanded="true" />
+            <element signature="e#17303#17304#0" expanded="true" />
             <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17411#17412#0" expanded="true" />
-            <element signature="e#17456#17457#0" expanded="true" />
-            <element signature="e#17497#17498#0" expanded="true" />
-            <element signature="e#17544#17545#0" expanded="true" />
+            <element signature="e#17501#17502#0" expanded="true" />
+            <element signature="e#17546#17547#0" expanded="true" />
+            <element signature="e#17587#17588#0" expanded="true" />
+            <element signature="e#17634#17635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -850,10 +851,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#findCirculation#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
             <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
             <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
+            <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
             <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
             <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
@@ -927,23 +930,22 @@
             <element signature="e#13070#13071#0" expanded="true" />
             <element signature="e#13116#13117#0" expanded="true" />
             <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
-            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
-            <element signature="e#15303#15304#0" expanded="true" />
-            <element signature="e#15342#15343#0" expanded="true" />
+            <element signature="e#15393#15394#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
             <element signature="method#run#0;class#Circulation#0" expanded="false" />
             <element signature="method#input#0;class#Circulation#0" expanded="false" />
             <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
             <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17110#17111#0" expanded="true" />
-            <element signature="e#17142#17143#0" expanded="true" />
-            <element signature="e#17178#17179#0" expanded="true" />
-            <element signature="e#17213#17214#0" expanded="true" />
+            <element signature="e#17200#17201#0" expanded="true" />
+            <element signature="e#17232#17233#0" expanded="true" />
+            <element signature="e#17268#17269#0" expanded="true" />
+            <element signature="e#17303#17304#0" expanded="true" />
             <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17411#17412#0" expanded="true" />
-            <element signature="e#17456#17457#0" expanded="true" />
-            <element signature="e#17497#17498#0" expanded="true" />
-            <element signature="e#17544#17545#0" expanded="true" />
+            <element signature="e#17501#17502#0" expanded="true" />
+            <element signature="e#17546#17547#0" expanded="true" />
+            <element signature="e#17587#17588#0" expanded="true" />
+            <element signature="e#17634#17635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -954,10 +956,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#findCirculation#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
             <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
             <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
+            <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
             <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
             <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
@@ -1031,37 +1035,38 @@
             <element signature="e#13070#13071#0" expanded="true" />
             <element signature="e#13116#13117#0" expanded="true" />
             <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
-            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
-            <element signature="e#15303#15304#0" expanded="true" />
-            <element signature="e#15342#15343#0" expanded="true" />
+            <element signature="e#15393#15394#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
             <element signature="method#run#0;class#Circulation#0" expanded="false" />
             <element signature="method#input#0;class#Circulation#0" expanded="false" />
             <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
             <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17110#17111#0" expanded="true" />
-            <element signature="e#17142#17143#0" expanded="true" />
-            <element signature="e#17178#17179#0" expanded="true" />
-            <element signature="e#17213#17214#0" expanded="true" />
+            <element signature="e#17200#17201#0" expanded="true" />
+            <element signature="e#17232#17233#0" expanded="true" />
+            <element signature="e#17268#17269#0" expanded="true" />
+            <element signature="e#17303#17304#0" expanded="true" />
             <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17411#17412#0" expanded="true" />
-            <element signature="e#17456#17457#0" expanded="true" />
-            <element signature="e#17497#17498#0" expanded="true" />
-            <element signature="e#17544#17545#0" expanded="true" />
+            <element signature="e#17501#17502#0" expanded="true" />
+            <element signature="e#17546#17547#0" expanded="true" />
+            <element signature="e#17587#17588#0" expanded="true" />
+            <element signature="e#17634#17635#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Circulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="450" column="0" lean-forward="false" selection-start-line="450" selection-start-column="0" selection-end-line="450" selection-end-column="0" />
+        <state relative-caret-position="269">
+          <caret line="463" column="46" lean-forward="false" selection-start-line="463" selection-start-column="46" selection-end-line="463" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#findCirculation#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
             <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
             <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
+            <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
             <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
             <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
@@ -1135,23 +1140,22 @@
             <element signature="e#13070#13071#0" expanded="true" />
             <element signature="e#13116#13117#0" expanded="true" />
             <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
-            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
-            <element signature="e#15303#15304#0" expanded="true" />
-            <element signature="e#15342#15343#0" expanded="true" />
+            <element signature="e#15393#15394#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
             <element signature="method#run#0;class#Circulation#0" expanded="false" />
             <element signature="method#input#0;class#Circulation#0" expanded="false" />
             <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
             <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17110#17111#0" expanded="true" />
-            <element signature="e#17142#17143#0" expanded="true" />
-            <element signature="e#17178#17179#0" expanded="true" />
-            <element signature="e#17213#17214#0" expanded="true" />
+            <element signature="e#17200#17201#0" expanded="true" />
+            <element signature="e#17232#17233#0" expanded="true" />
+            <element signature="e#17268#17269#0" expanded="true" />
+            <element signature="e#17303#17304#0" expanded="true" />
             <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17411#17412#0" expanded="true" />
-            <element signature="e#17456#17457#0" expanded="true" />
-            <element signature="e#17497#17498#0" expanded="true" />
-            <element signature="e#17544#17545#0" expanded="true" />
+            <element signature="e#17501#17502#0" expanded="true" />
+            <element signature="e#17546#17547#0" expanded="true" />
+            <element signature="e#17587#17588#0" expanded="true" />
+            <element signature="e#17634#17635#0" expanded="true" />
           </folding>
         </state>
       </provider>
