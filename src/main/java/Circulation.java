@@ -24,7 +24,6 @@ public class Circulation {
         System.out.println("Maxflow = " + maxFlow);
     }
 
-    // TODO: 3/25/18 I can do this all in the createGraph method faster probably
     /**
      * remove minimum demand and replace with demands on nodes
      * @param originalGraph
@@ -66,9 +65,9 @@ public class Circulation {
             newGraph.changeNodeDemand(sourceOrSink, demand);
         }
         if(source) {
-            newGraph.linkNodeToNode(sourceOrSink, i, 0, demand);
+            newGraph.linkNodeToNode(i, sourceOrSink, 0, demand);
         } else {
-            newGraph.linkNodeToNode(i, sourceOrSink,  0, -demand);
+            newGraph.linkNodeToNode(sourceOrSink,  i, 0, -demand);
         }
         newGraph.setNodeDemand(i,0);
         return sourceOrSink;
@@ -442,7 +441,9 @@ public class Circulation {
 
         int[][] reverseGraph = new int[numVertices][numVertices];
         for(u=0;u<numVertices;u++){
-            reverseGraph[u] = Arrays.copyOf(mainGraph[u],numVertices);
+            for(v = 0; v< numVertices;v++){
+                reverseGraph[v][u] = mainGraph[u][v];
+            }
         }
 
         int parent[] = new int[numVertices];
@@ -466,9 +467,10 @@ public class Circulation {
                 reverseGraph[v][u] += pathFlow;
                 v = u;
             }
-// TODO: 4/6/18 figure out how to apply pathFlow to correct edge here             
+// TODO: 4/6/18 figure out the flow for each edge
             maxFlow += pathFlow;
         }
+
 
         return maxFlow;
 
@@ -484,6 +486,7 @@ public class Circulation {
         queue.add(s);
         visited[s] = true;
         parent[s] = -1;
+
 
         while(!queue.isEmpty()) {
             int u = queue.poll();
