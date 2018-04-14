@@ -5,6 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+// TODO: 4/14/18 make two more 2d arrays: an array that connects node connections to paths, and one for the final flow
+// in other words, if edge 1 connects node 2 to node 3, then nodeToEdge[2][3] = 1,
+// and if the flow over edge 1 is 4, then [2][3] = 4
+// from that I can reconstruct the edge flows
+
 // TODO: 4/6/18 rewrite input function so it creates array graph from beginning
 
 
