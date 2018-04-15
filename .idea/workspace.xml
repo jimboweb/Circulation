@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/Circulation.java" line="47" mnemonic="S" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/Circulation.java" line="369" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/Circulation.java" line="76" mnemonic="N" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/Circulation.java" line="61" mnemonic="S" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/Circulation.java" line="327" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/Circulation.java" line="90" mnemonic="N" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61f0e230-7296-4c32-a9cc-4e92ee6825bb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Circulation.java" afterPath="$PROJECT_DIR$/src/main/java/Circulation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,101 +60,97 @@
       <file leaf-file-name="Circulation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Circulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+            <state relative-caret-position="59">
+              <caret line="338" column="26" lean-forward="false" selection-start-line="338" selection-start-column="26" selection-end-line="338" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="method#createNodeConnectionToEdgeArray#0;class#Circulation#0" expanded="false" />
                 <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
                 <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
                 <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
                 <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
-                <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
-                <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
                 <element signature="method#buildGraph#0;class#Circulation#0" expanded="false" />
                 <element signature="class#Edge#0;class#Circulation#0" expanded="false" />
-                <element signature="e#6556#6557#0" expanded="true" />
-                <element signature="e#6592#6593#0" expanded="true" />
-                <element signature="e#6624#6625#0" expanded="true" />
-                <element signature="e#6659#6660#0" expanded="true" />
-                <element signature="e#6689#6690#0" expanded="true" />
-                <element signature="e#6722#6723#0" expanded="true" />
-                <element signature="e#6758#6759#0" expanded="true" />
-                <element signature="e#6797#6798#0" expanded="true" />
-                <element signature="e#6836#6837#0" expanded="true" />
-                <element signature="e#6878#6879#0" expanded="true" />
-                <element signature="e#6910#6911#0" expanded="true" />
-                <element signature="e#6945#6946#0" expanded="true" />
-                <element signature="e#7000#7001#0" expanded="true" />
-                <element signature="e#7054#7055#0" expanded="true" />
-                <element signature="e#7095#7096#0" expanded="true" />
-                <element signature="e#7135#7136#0" expanded="true" />
-                <element signature="e#7172#7173#0" expanded="true" />
-                <element signature="e#7208#7209#0" expanded="true" />
-                <element signature="e#7257#7258#0" expanded="true" />
-                <element signature="e#7305#7306#0" expanded="true" />
-                <element signature="e#7346#7347#0" expanded="true" />
-                <element signature="e#7386#7387#0" expanded="true" />
-                <element signature="e#7429#7430#0" expanded="true" />
-                <element signature="e#7471#7472#0" expanded="true" />
-                <element signature="e#7520#7521#0" expanded="true" />
-                <element signature="e#7560#7561#0" expanded="true" />
-                <element signature="e#7612#7613#0" expanded="true" />
-                <element signature="e#7655#7656#0" expanded="true" />
-                <element signature="docComment;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="e#5027#5028#0" expanded="true" />
+                <element signature="e#5063#5064#0" expanded="true" />
+                <element signature="e#5095#5096#0" expanded="true" />
+                <element signature="e#5130#5131#0" expanded="true" />
+                <element signature="e#5160#5161#0" expanded="true" />
+                <element signature="e#5193#5194#0" expanded="true" />
+                <element signature="e#5229#5230#0" expanded="true" />
+                <element signature="e#5268#5269#0" expanded="true" />
+                <element signature="e#5307#5308#0" expanded="true" />
+                <element signature="e#5349#5350#0" expanded="true" />
+                <element signature="e#5381#5382#0" expanded="true" />
+                <element signature="e#5416#5417#0" expanded="true" />
+                <element signature="e#5471#5472#0" expanded="true" />
+                <element signature="e#5525#5526#0" expanded="true" />
+                <element signature="e#5566#5567#0" expanded="true" />
+                <element signature="e#5606#5607#0" expanded="true" />
+                <element signature="e#5643#5644#0" expanded="true" />
+                <element signature="e#5679#5680#0" expanded="true" />
+                <element signature="e#5728#5729#0" expanded="true" />
+                <element signature="e#5776#5777#0" expanded="true" />
+                <element signature="e#5817#5818#0" expanded="true" />
+                <element signature="e#5857#5858#0" expanded="true" />
+                <element signature="e#5900#5901#0" expanded="true" />
+                <element signature="e#5942#5943#0" expanded="true" />
+                <element signature="e#5991#5992#0" expanded="true" />
+                <element signature="e#6031#6032#0" expanded="true" />
+                <element signature="e#6083#6084#0" expanded="true" />
+                <element signature="e#6126#6127#0" expanded="true" />
+                <element signature="docComment;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="e#6634#6635#0" expanded="true" />
+                <element signature="e#6678#6679#0" expanded="true" />
+                <element signature="e#6719#6720#0" expanded="true" />
+                <element signature="e#6759#6760#0" expanded="true" />
+                <element signature="e#6793#6794#0" expanded="true" />
+                <element signature="e#6830#6831#0" expanded="true" />
+                <element signature="e#6862#6863#0" expanded="true" />
+                <element signature="e#6897#6898#0" expanded="true" />
+                <element signature="e#6947#6948#0" expanded="true" />
+                <element signature="e#6994#6995#0" expanded="true" />
+                <element signature="docComment;method#DeprecatedFlowGraph#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="docComment;method#addEdge#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="method#addFlow#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="e#9269#9270#0" expanded="true" />
+                <element signature="e#9326#9327#0" expanded="true" />
+                <element signature="e#9384#9385#0" expanded="true" />
+                <element signature="e#9431#9432#0" expanded="true" />
+                <element signature="e#10118#10119#0" expanded="true" />
+                <element signature="e#10166#10167#0" expanded="true" />
+                <element signature="e#10227#10228#0" expanded="true" />
+                <element signature="e#10294#10295#0" expanded="true" />
+                <element signature="e#10565#10566#0" expanded="true" />
+                <element signature="e#10602#10603#0" expanded="true" />
+                <element signature="e#10885#10886#0" expanded="true" />
+                <element signature="e#10921#10922#0" expanded="true" />
                 <element signature="class#FlowGraph#0;class#Circulation#0" expanded="false" />
-                <element signature="e#8153#8154#0" expanded="true" />
-                <element signature="e#8197#8198#0" expanded="true" />
-                <element signature="e#8238#8239#0" expanded="true" />
-                <element signature="e#8278#8279#0" expanded="true" />
-                <element signature="e#8312#8313#0" expanded="true" />
-                <element signature="e#8349#8350#0" expanded="true" />
-                <element signature="e#8381#8382#0" expanded="true" />
-                <element signature="e#8416#8417#0" expanded="true" />
-                <element signature="e#8466#8467#0" expanded="true" />
-                <element signature="e#8513#8514#0" expanded="true" />
-                <element signature="docComment;method#FlowGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-                <element signature="docComment;method#addEdge#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-                <element signature="method#addFlow#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-                <element signature="e#10778#10779#0" expanded="true" />
-                <element signature="e#10835#10836#0" expanded="true" />
-                <element signature="e#10893#10894#0" expanded="true" />
-                <element signature="e#10940#10941#0" expanded="true" />
-                <element signature="e#11597#11598#0" expanded="true" />
-                <element signature="e#11645#11646#0" expanded="true" />
-                <element signature="e#11706#11707#0" expanded="true" />
-                <element signature="e#11773#11774#0" expanded="true" />
-                <element signature="e#12044#12045#0" expanded="true" />
-                <element signature="e#12081#12082#0" expanded="true" />
-                <element signature="e#12364#12365#0" expanded="true" />
-                <element signature="e#12400#12401#0" expanded="true" />
-                <element signature="docComment;class#FlowPath#0;class#Circulation#0" expanded="false" />
-                <element signature="class#FlowPath#0;class#Circulation#0" expanded="false" />
-                <element signature="e#12632#12633#0" expanded="true" />
-                <element signature="e#12682#12683#0" expanded="true" />
-                <element signature="e#12922#12923#0" expanded="true" />
-                <element signature="e#12962#12963#0" expanded="true" />
-                <element signature="e#13094#13095#0" expanded="true" />
-                <element signature="e#13136#13137#0" expanded="true" />
-                <element signature="e#13248#13249#0" expanded="true" />
-                <element signature="e#13288#13289#0" expanded="true" />
-                <element signature="e#13323#13324#0" expanded="true" />
-                <element signature="e#13369#13370#0" expanded="true" />
-                <element signature="e#15738#15739#0" expanded="true" />
-                <element signature="e#15777#15778#0" expanded="true" />
+                <element signature="method#flowGraphToArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="method#createReverseGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="method#createNodeConnectionToEdgeArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+                <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
+                <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
+                <element signature="e#16228#16229#0" expanded="true" />
+                <element signature="e#16267#16268#0" expanded="true" />
+                <element signature="method#run#0;class#Circulation#0" expanded="false" />
                 <element signature="method#input#0;class#Circulation#0" expanded="false" />
                 <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
+                <element signature="class#Inputter#0;class#Circulation#0" expanded="false" />
                 <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-                <element signature="e#17545#17546#0" expanded="true" />
-                <element signature="e#17577#17578#0" expanded="true" />
-                <element signature="e#17613#17614#0" expanded="true" />
-                <element signature="e#17648#17649#0" expanded="true" />
+                <element signature="e#18035#18036#0" expanded="true" />
+                <element signature="e#18067#18068#0" expanded="true" />
+                <element signature="e#18103#18104#0" expanded="true" />
+                <element signature="e#18138#18139#0" expanded="true" />
                 <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
                 <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-                <element signature="e#17846#17847#0" expanded="true" />
-                <element signature="e#17891#17892#0" expanded="true" />
-                <element signature="e#17932#17933#0" expanded="true" />
-                <element signature="e#17979#17980#0" expanded="true" />
+                <element signature="e#18336#18337#0" expanded="true" />
+                <element signature="e#18381#18382#0" expanded="true" />
+                <element signature="e#18422#18423#0" expanded="true" />
+                <element signature="e#18469#18470#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -496,8 +494,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -527,7 +523,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -667,12 +665,13 @@
       <workItem from="1521843795085" duration="6580000" />
       <workItem from="1522153527848" duration="3598000" />
       <workItem from="1522240073832" duration="35807000" />
-      <workItem from="1523621908094" duration="5995000" />
+      <workItem from="1523621908094" duration="6472000" />
+      <workItem from="1523751108739" duration="3179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72893000" />
+    <option name="totallyTimeSpent" value="76549000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -689,33 +688,33 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.4943736" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5326332" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.4943736" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.4943736" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2648162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26856714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.4943736" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981245" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.46736684" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.46736684" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.4943736" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,7 +728,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Circulation.java</url>
-          <line>479</line>
+          <line>481</line>
           <properties />
           <option name="timeStamp" value="213" />
         </line-breakpoint>
@@ -737,7 +736,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="238" />
+      <option name="time" value="240" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -753,96 +752,92 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#Circulation#0" expanded="false" />
             <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
-            <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
-            <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
             <element signature="method#buildGraph#0;class#Circulation#0" expanded="false" />
             <element signature="class#Edge#0;class#Circulation#0" expanded="false" />
-            <element signature="e#6556#6557#0" expanded="true" />
-            <element signature="e#6592#6593#0" expanded="true" />
-            <element signature="e#6624#6625#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6689#6690#0" expanded="true" />
-            <element signature="e#6722#6723#0" expanded="true" />
-            <element signature="e#6758#6759#0" expanded="true" />
-            <element signature="e#6797#6798#0" expanded="true" />
-            <element signature="e#6836#6837#0" expanded="true" />
-            <element signature="e#6878#6879#0" expanded="true" />
-            <element signature="e#6910#6911#0" expanded="true" />
-            <element signature="e#6945#6946#0" expanded="true" />
-            <element signature="e#7000#7001#0" expanded="true" />
-            <element signature="e#7054#7055#0" expanded="true" />
-            <element signature="e#7095#7096#0" expanded="true" />
-            <element signature="e#7135#7136#0" expanded="true" />
-            <element signature="e#7172#7173#0" expanded="true" />
-            <element signature="e#7208#7209#0" expanded="true" />
-            <element signature="e#7257#7258#0" expanded="true" />
-            <element signature="e#7305#7306#0" expanded="true" />
-            <element signature="e#7346#7347#0" expanded="true" />
-            <element signature="e#7386#7387#0" expanded="true" />
-            <element signature="e#7429#7430#0" expanded="true" />
-            <element signature="e#7471#7472#0" expanded="true" />
-            <element signature="e#7520#7521#0" expanded="true" />
-            <element signature="e#7560#7561#0" expanded="true" />
-            <element signature="e#7612#7613#0" expanded="true" />
-            <element signature="e#7655#7656#0" expanded="true" />
-            <element signature="docComment;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5095#5096#0" expanded="true" />
+            <element signature="e#5130#5131#0" expanded="true" />
+            <element signature="e#5160#5161#0" expanded="true" />
+            <element signature="e#5193#5194#0" expanded="true" />
+            <element signature="e#5229#5230#0" expanded="true" />
+            <element signature="e#5268#5269#0" expanded="true" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
+            <element signature="e#5416#5417#0" expanded="true" />
+            <element signature="e#5471#5472#0" expanded="true" />
+            <element signature="e#5525#5526#0" expanded="true" />
+            <element signature="e#5566#5567#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
+            <element signature="e#5643#5644#0" expanded="true" />
+            <element signature="e#5679#5680#0" expanded="true" />
+            <element signature="e#5728#5729#0" expanded="true" />
+            <element signature="e#5776#5777#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5857#5858#0" expanded="true" />
+            <element signature="e#5900#5901#0" expanded="true" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6031#6032#0" expanded="true" />
+            <element signature="e#6083#6084#0" expanded="true" />
+            <element signature="e#6126#6127#0" expanded="true" />
+            <element signature="docComment;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#6634#6635#0" expanded="true" />
+            <element signature="e#6678#6679#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+            <element signature="e#6759#6760#0" expanded="true" />
+            <element signature="e#6793#6794#0" expanded="true" />
+            <element signature="e#6830#6831#0" expanded="true" />
+            <element signature="e#6862#6863#0" expanded="true" />
+            <element signature="e#6897#6898#0" expanded="true" />
+            <element signature="e#6947#6948#0" expanded="true" />
+            <element signature="e#6994#6995#0" expanded="true" />
+            <element signature="docComment;method#DeprecatedFlowGraph#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#addEdge#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#addFlow#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#9269#9270#0" expanded="true" />
+            <element signature="e#9326#9327#0" expanded="true" />
+            <element signature="e#9384#9385#0" expanded="true" />
+            <element signature="e#9431#9432#0" expanded="true" />
+            <element signature="e#10118#10119#0" expanded="true" />
+            <element signature="e#10166#10167#0" expanded="true" />
+            <element signature="e#10227#10228#0" expanded="true" />
+            <element signature="e#10294#10295#0" expanded="true" />
+            <element signature="e#10565#10566#0" expanded="true" />
+            <element signature="e#10602#10603#0" expanded="true" />
+            <element signature="e#10885#10886#0" expanded="true" />
+            <element signature="e#10921#10922#0" expanded="true" />
             <element signature="class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#8153#8154#0" expanded="true" />
-            <element signature="e#8197#8198#0" expanded="true" />
-            <element signature="e#8238#8239#0" expanded="true" />
-            <element signature="e#8278#8279#0" expanded="true" />
-            <element signature="e#8312#8313#0" expanded="true" />
-            <element signature="e#8349#8350#0" expanded="true" />
-            <element signature="e#8381#8382#0" expanded="true" />
-            <element signature="e#8416#8417#0" expanded="true" />
-            <element signature="e#8466#8467#0" expanded="true" />
-            <element signature="e#8513#8514#0" expanded="true" />
-            <element signature="docComment;method#FlowGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="docComment;method#addEdge#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="method#addFlow#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#10778#10779#0" expanded="true" />
-            <element signature="e#10835#10836#0" expanded="true" />
-            <element signature="e#10893#10894#0" expanded="true" />
-            <element signature="e#10940#10941#0" expanded="true" />
-            <element signature="e#11597#11598#0" expanded="true" />
-            <element signature="e#11645#11646#0" expanded="true" />
-            <element signature="e#11706#11707#0" expanded="true" />
-            <element signature="e#11773#11774#0" expanded="true" />
-            <element signature="e#12044#12045#0" expanded="true" />
-            <element signature="e#12081#12082#0" expanded="true" />
-            <element signature="e#12364#12365#0" expanded="true" />
-            <element signature="e#12400#12401#0" expanded="true" />
-            <element signature="docComment;class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="e#12632#12633#0" expanded="true" />
-            <element signature="e#12682#12683#0" expanded="true" />
-            <element signature="e#12922#12923#0" expanded="true" />
-            <element signature="e#12962#12963#0" expanded="true" />
-            <element signature="e#13094#13095#0" expanded="true" />
-            <element signature="e#13136#13137#0" expanded="true" />
-            <element signature="e#13248#13249#0" expanded="true" />
-            <element signature="e#13288#13289#0" expanded="true" />
-            <element signature="e#13323#13324#0" expanded="true" />
-            <element signature="e#13369#13370#0" expanded="true" />
-            <element signature="e#15738#15739#0" expanded="true" />
-            <element signature="e#15777#15778#0" expanded="true" />
+            <element signature="method#flowGraphToArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createReverseGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
+            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
+            <element signature="e#16228#16229#0" expanded="true" />
+            <element signature="e#16267#16268#0" expanded="true" />
+            <element signature="method#run#0;class#Circulation#0" expanded="false" />
             <element signature="method#input#0;class#Circulation#0" expanded="false" />
             <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Inputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17545#17546#0" expanded="true" />
-            <element signature="e#17577#17578#0" expanded="true" />
-            <element signature="e#17613#17614#0" expanded="true" />
-            <element signature="e#17648#17649#0" expanded="true" />
+            <element signature="e#18035#18036#0" expanded="true" />
+            <element signature="e#18067#18068#0" expanded="true" />
+            <element signature="e#18103#18104#0" expanded="true" />
+            <element signature="e#18138#18139#0" expanded="true" />
             <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17846#17847#0" expanded="true" />
-            <element signature="e#17891#17892#0" expanded="true" />
-            <element signature="e#17932#17933#0" expanded="true" />
-            <element signature="e#17979#17980#0" expanded="true" />
+            <element signature="e#18336#18337#0" expanded="true" />
+            <element signature="e#18381#18382#0" expanded="true" />
+            <element signature="e#18422#18423#0" expanded="true" />
+            <element signature="e#18469#18470#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -854,96 +849,92 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#Circulation#0" expanded="false" />
             <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
-            <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
-            <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
             <element signature="method#buildGraph#0;class#Circulation#0" expanded="false" />
             <element signature="class#Edge#0;class#Circulation#0" expanded="false" />
-            <element signature="e#6556#6557#0" expanded="true" />
-            <element signature="e#6592#6593#0" expanded="true" />
-            <element signature="e#6624#6625#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6689#6690#0" expanded="true" />
-            <element signature="e#6722#6723#0" expanded="true" />
-            <element signature="e#6758#6759#0" expanded="true" />
-            <element signature="e#6797#6798#0" expanded="true" />
-            <element signature="e#6836#6837#0" expanded="true" />
-            <element signature="e#6878#6879#0" expanded="true" />
-            <element signature="e#6910#6911#0" expanded="true" />
-            <element signature="e#6945#6946#0" expanded="true" />
-            <element signature="e#7000#7001#0" expanded="true" />
-            <element signature="e#7054#7055#0" expanded="true" />
-            <element signature="e#7095#7096#0" expanded="true" />
-            <element signature="e#7135#7136#0" expanded="true" />
-            <element signature="e#7172#7173#0" expanded="true" />
-            <element signature="e#7208#7209#0" expanded="true" />
-            <element signature="e#7257#7258#0" expanded="true" />
-            <element signature="e#7305#7306#0" expanded="true" />
-            <element signature="e#7346#7347#0" expanded="true" />
-            <element signature="e#7386#7387#0" expanded="true" />
-            <element signature="e#7429#7430#0" expanded="true" />
-            <element signature="e#7471#7472#0" expanded="true" />
-            <element signature="e#7520#7521#0" expanded="true" />
-            <element signature="e#7560#7561#0" expanded="true" />
-            <element signature="e#7612#7613#0" expanded="true" />
-            <element signature="e#7655#7656#0" expanded="true" />
-            <element signature="docComment;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5095#5096#0" expanded="true" />
+            <element signature="e#5130#5131#0" expanded="true" />
+            <element signature="e#5160#5161#0" expanded="true" />
+            <element signature="e#5193#5194#0" expanded="true" />
+            <element signature="e#5229#5230#0" expanded="true" />
+            <element signature="e#5268#5269#0" expanded="true" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
+            <element signature="e#5416#5417#0" expanded="true" />
+            <element signature="e#5471#5472#0" expanded="true" />
+            <element signature="e#5525#5526#0" expanded="true" />
+            <element signature="e#5566#5567#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
+            <element signature="e#5643#5644#0" expanded="true" />
+            <element signature="e#5679#5680#0" expanded="true" />
+            <element signature="e#5728#5729#0" expanded="true" />
+            <element signature="e#5776#5777#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5857#5858#0" expanded="true" />
+            <element signature="e#5900#5901#0" expanded="true" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6031#6032#0" expanded="true" />
+            <element signature="e#6083#6084#0" expanded="true" />
+            <element signature="e#6126#6127#0" expanded="true" />
+            <element signature="docComment;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#6634#6635#0" expanded="true" />
+            <element signature="e#6678#6679#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+            <element signature="e#6759#6760#0" expanded="true" />
+            <element signature="e#6793#6794#0" expanded="true" />
+            <element signature="e#6830#6831#0" expanded="true" />
+            <element signature="e#6862#6863#0" expanded="true" />
+            <element signature="e#6897#6898#0" expanded="true" />
+            <element signature="e#6947#6948#0" expanded="true" />
+            <element signature="e#6994#6995#0" expanded="true" />
+            <element signature="docComment;method#DeprecatedFlowGraph#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#addEdge#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#addFlow#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#9269#9270#0" expanded="true" />
+            <element signature="e#9326#9327#0" expanded="true" />
+            <element signature="e#9384#9385#0" expanded="true" />
+            <element signature="e#9431#9432#0" expanded="true" />
+            <element signature="e#10118#10119#0" expanded="true" />
+            <element signature="e#10166#10167#0" expanded="true" />
+            <element signature="e#10227#10228#0" expanded="true" />
+            <element signature="e#10294#10295#0" expanded="true" />
+            <element signature="e#10565#10566#0" expanded="true" />
+            <element signature="e#10602#10603#0" expanded="true" />
+            <element signature="e#10885#10886#0" expanded="true" />
+            <element signature="e#10921#10922#0" expanded="true" />
             <element signature="class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#8153#8154#0" expanded="true" />
-            <element signature="e#8197#8198#0" expanded="true" />
-            <element signature="e#8238#8239#0" expanded="true" />
-            <element signature="e#8278#8279#0" expanded="true" />
-            <element signature="e#8312#8313#0" expanded="true" />
-            <element signature="e#8349#8350#0" expanded="true" />
-            <element signature="e#8381#8382#0" expanded="true" />
-            <element signature="e#8416#8417#0" expanded="true" />
-            <element signature="e#8466#8467#0" expanded="true" />
-            <element signature="e#8513#8514#0" expanded="true" />
-            <element signature="docComment;method#FlowGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="docComment;method#addEdge#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="method#addFlow#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#10778#10779#0" expanded="true" />
-            <element signature="e#10835#10836#0" expanded="true" />
-            <element signature="e#10893#10894#0" expanded="true" />
-            <element signature="e#10940#10941#0" expanded="true" />
-            <element signature="e#11597#11598#0" expanded="true" />
-            <element signature="e#11645#11646#0" expanded="true" />
-            <element signature="e#11706#11707#0" expanded="true" />
-            <element signature="e#11773#11774#0" expanded="true" />
-            <element signature="e#12044#12045#0" expanded="true" />
-            <element signature="e#12081#12082#0" expanded="true" />
-            <element signature="e#12364#12365#0" expanded="true" />
-            <element signature="e#12400#12401#0" expanded="true" />
-            <element signature="docComment;class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="e#12632#12633#0" expanded="true" />
-            <element signature="e#12682#12683#0" expanded="true" />
-            <element signature="e#12922#12923#0" expanded="true" />
-            <element signature="e#12962#12963#0" expanded="true" />
-            <element signature="e#13094#13095#0" expanded="true" />
-            <element signature="e#13136#13137#0" expanded="true" />
-            <element signature="e#13248#13249#0" expanded="true" />
-            <element signature="e#13288#13289#0" expanded="true" />
-            <element signature="e#13323#13324#0" expanded="true" />
-            <element signature="e#13369#13370#0" expanded="true" />
-            <element signature="e#15738#15739#0" expanded="true" />
-            <element signature="e#15777#15778#0" expanded="true" />
+            <element signature="method#flowGraphToArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createReverseGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
+            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
+            <element signature="e#16228#16229#0" expanded="true" />
+            <element signature="e#16267#16268#0" expanded="true" />
+            <element signature="method#run#0;class#Circulation#0" expanded="false" />
             <element signature="method#input#0;class#Circulation#0" expanded="false" />
             <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Inputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17545#17546#0" expanded="true" />
-            <element signature="e#17577#17578#0" expanded="true" />
-            <element signature="e#17613#17614#0" expanded="true" />
-            <element signature="e#17648#17649#0" expanded="true" />
+            <element signature="e#18035#18036#0" expanded="true" />
+            <element signature="e#18067#18068#0" expanded="true" />
+            <element signature="e#18103#18104#0" expanded="true" />
+            <element signature="e#18138#18139#0" expanded="true" />
             <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17846#17847#0" expanded="true" />
-            <element signature="e#17891#17892#0" expanded="true" />
-            <element signature="e#17932#17933#0" expanded="true" />
-            <element signature="e#17979#17980#0" expanded="true" />
+            <element signature="e#18336#18337#0" expanded="true" />
+            <element signature="e#18381#18382#0" expanded="true" />
+            <element signature="e#18422#18423#0" expanded="true" />
+            <element signature="e#18469#18470#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -955,96 +946,92 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#Circulation#0" expanded="false" />
             <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
-            <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
-            <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
             <element signature="method#buildGraph#0;class#Circulation#0" expanded="false" />
             <element signature="class#Edge#0;class#Circulation#0" expanded="false" />
-            <element signature="e#6556#6557#0" expanded="true" />
-            <element signature="e#6592#6593#0" expanded="true" />
-            <element signature="e#6624#6625#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6689#6690#0" expanded="true" />
-            <element signature="e#6722#6723#0" expanded="true" />
-            <element signature="e#6758#6759#0" expanded="true" />
-            <element signature="e#6797#6798#0" expanded="true" />
-            <element signature="e#6836#6837#0" expanded="true" />
-            <element signature="e#6878#6879#0" expanded="true" />
-            <element signature="e#6910#6911#0" expanded="true" />
-            <element signature="e#6945#6946#0" expanded="true" />
-            <element signature="e#7000#7001#0" expanded="true" />
-            <element signature="e#7054#7055#0" expanded="true" />
-            <element signature="e#7095#7096#0" expanded="true" />
-            <element signature="e#7135#7136#0" expanded="true" />
-            <element signature="e#7172#7173#0" expanded="true" />
-            <element signature="e#7208#7209#0" expanded="true" />
-            <element signature="e#7257#7258#0" expanded="true" />
-            <element signature="e#7305#7306#0" expanded="true" />
-            <element signature="e#7346#7347#0" expanded="true" />
-            <element signature="e#7386#7387#0" expanded="true" />
-            <element signature="e#7429#7430#0" expanded="true" />
-            <element signature="e#7471#7472#0" expanded="true" />
-            <element signature="e#7520#7521#0" expanded="true" />
-            <element signature="e#7560#7561#0" expanded="true" />
-            <element signature="e#7612#7613#0" expanded="true" />
-            <element signature="e#7655#7656#0" expanded="true" />
-            <element signature="docComment;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5095#5096#0" expanded="true" />
+            <element signature="e#5130#5131#0" expanded="true" />
+            <element signature="e#5160#5161#0" expanded="true" />
+            <element signature="e#5193#5194#0" expanded="true" />
+            <element signature="e#5229#5230#0" expanded="true" />
+            <element signature="e#5268#5269#0" expanded="true" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
+            <element signature="e#5416#5417#0" expanded="true" />
+            <element signature="e#5471#5472#0" expanded="true" />
+            <element signature="e#5525#5526#0" expanded="true" />
+            <element signature="e#5566#5567#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
+            <element signature="e#5643#5644#0" expanded="true" />
+            <element signature="e#5679#5680#0" expanded="true" />
+            <element signature="e#5728#5729#0" expanded="true" />
+            <element signature="e#5776#5777#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5857#5858#0" expanded="true" />
+            <element signature="e#5900#5901#0" expanded="true" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6031#6032#0" expanded="true" />
+            <element signature="e#6083#6084#0" expanded="true" />
+            <element signature="e#6126#6127#0" expanded="true" />
+            <element signature="docComment;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#6634#6635#0" expanded="true" />
+            <element signature="e#6678#6679#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+            <element signature="e#6759#6760#0" expanded="true" />
+            <element signature="e#6793#6794#0" expanded="true" />
+            <element signature="e#6830#6831#0" expanded="true" />
+            <element signature="e#6862#6863#0" expanded="true" />
+            <element signature="e#6897#6898#0" expanded="true" />
+            <element signature="e#6947#6948#0" expanded="true" />
+            <element signature="e#6994#6995#0" expanded="true" />
+            <element signature="docComment;method#DeprecatedFlowGraph#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#addEdge#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#addFlow#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#9269#9270#0" expanded="true" />
+            <element signature="e#9326#9327#0" expanded="true" />
+            <element signature="e#9384#9385#0" expanded="true" />
+            <element signature="e#9431#9432#0" expanded="true" />
+            <element signature="e#10118#10119#0" expanded="true" />
+            <element signature="e#10166#10167#0" expanded="true" />
+            <element signature="e#10227#10228#0" expanded="true" />
+            <element signature="e#10294#10295#0" expanded="true" />
+            <element signature="e#10565#10566#0" expanded="true" />
+            <element signature="e#10602#10603#0" expanded="true" />
+            <element signature="e#10885#10886#0" expanded="true" />
+            <element signature="e#10921#10922#0" expanded="true" />
             <element signature="class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#8153#8154#0" expanded="true" />
-            <element signature="e#8197#8198#0" expanded="true" />
-            <element signature="e#8238#8239#0" expanded="true" />
-            <element signature="e#8278#8279#0" expanded="true" />
-            <element signature="e#8312#8313#0" expanded="true" />
-            <element signature="e#8349#8350#0" expanded="true" />
-            <element signature="e#8381#8382#0" expanded="true" />
-            <element signature="e#8416#8417#0" expanded="true" />
-            <element signature="e#8466#8467#0" expanded="true" />
-            <element signature="e#8513#8514#0" expanded="true" />
-            <element signature="docComment;method#FlowGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="docComment;method#addEdge#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="method#addFlow#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#10778#10779#0" expanded="true" />
-            <element signature="e#10835#10836#0" expanded="true" />
-            <element signature="e#10893#10894#0" expanded="true" />
-            <element signature="e#10940#10941#0" expanded="true" />
-            <element signature="e#11597#11598#0" expanded="true" />
-            <element signature="e#11645#11646#0" expanded="true" />
-            <element signature="e#11706#11707#0" expanded="true" />
-            <element signature="e#11773#11774#0" expanded="true" />
-            <element signature="e#12044#12045#0" expanded="true" />
-            <element signature="e#12081#12082#0" expanded="true" />
-            <element signature="e#12364#12365#0" expanded="true" />
-            <element signature="e#12400#12401#0" expanded="true" />
-            <element signature="docComment;class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="e#12632#12633#0" expanded="true" />
-            <element signature="e#12682#12683#0" expanded="true" />
-            <element signature="e#12922#12923#0" expanded="true" />
-            <element signature="e#12962#12963#0" expanded="true" />
-            <element signature="e#13094#13095#0" expanded="true" />
-            <element signature="e#13136#13137#0" expanded="true" />
-            <element signature="e#13248#13249#0" expanded="true" />
-            <element signature="e#13288#13289#0" expanded="true" />
-            <element signature="e#13323#13324#0" expanded="true" />
-            <element signature="e#13369#13370#0" expanded="true" />
-            <element signature="e#15738#15739#0" expanded="true" />
-            <element signature="e#15777#15778#0" expanded="true" />
+            <element signature="method#flowGraphToArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createReverseGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
+            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
+            <element signature="e#16228#16229#0" expanded="true" />
+            <element signature="e#16267#16268#0" expanded="true" />
+            <element signature="method#run#0;class#Circulation#0" expanded="false" />
             <element signature="method#input#0;class#Circulation#0" expanded="false" />
             <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Inputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17545#17546#0" expanded="true" />
-            <element signature="e#17577#17578#0" expanded="true" />
-            <element signature="e#17613#17614#0" expanded="true" />
-            <element signature="e#17648#17649#0" expanded="true" />
+            <element signature="e#18035#18036#0" expanded="true" />
+            <element signature="e#18067#18068#0" expanded="true" />
+            <element signature="e#18103#18104#0" expanded="true" />
+            <element signature="e#18138#18139#0" expanded="true" />
             <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17846#17847#0" expanded="true" />
-            <element signature="e#17891#17892#0" expanded="true" />
-            <element signature="e#17932#17933#0" expanded="true" />
-            <element signature="e#17979#17980#0" expanded="true" />
+            <element signature="e#18336#18337#0" expanded="true" />
+            <element signature="e#18381#18382#0" expanded="true" />
+            <element signature="e#18422#18423#0" expanded="true" />
+            <element signature="e#18469#18470#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1056,197 +1043,286 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#Circulation#0" expanded="false" />
             <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
-            <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
-            <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
             <element signature="method#buildGraph#0;class#Circulation#0" expanded="false" />
             <element signature="class#Edge#0;class#Circulation#0" expanded="false" />
-            <element signature="e#6556#6557#0" expanded="true" />
-            <element signature="e#6592#6593#0" expanded="true" />
-            <element signature="e#6624#6625#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6689#6690#0" expanded="true" />
-            <element signature="e#6722#6723#0" expanded="true" />
-            <element signature="e#6758#6759#0" expanded="true" />
-            <element signature="e#6797#6798#0" expanded="true" />
-            <element signature="e#6836#6837#0" expanded="true" />
-            <element signature="e#6878#6879#0" expanded="true" />
-            <element signature="e#6910#6911#0" expanded="true" />
-            <element signature="e#6945#6946#0" expanded="true" />
-            <element signature="e#7000#7001#0" expanded="true" />
-            <element signature="e#7054#7055#0" expanded="true" />
-            <element signature="e#7095#7096#0" expanded="true" />
-            <element signature="e#7135#7136#0" expanded="true" />
-            <element signature="e#7172#7173#0" expanded="true" />
-            <element signature="e#7208#7209#0" expanded="true" />
-            <element signature="e#7257#7258#0" expanded="true" />
-            <element signature="e#7305#7306#0" expanded="true" />
-            <element signature="e#7346#7347#0" expanded="true" />
-            <element signature="e#7386#7387#0" expanded="true" />
-            <element signature="e#7429#7430#0" expanded="true" />
-            <element signature="e#7471#7472#0" expanded="true" />
-            <element signature="e#7520#7521#0" expanded="true" />
-            <element signature="e#7560#7561#0" expanded="true" />
-            <element signature="e#7612#7613#0" expanded="true" />
-            <element signature="e#7655#7656#0" expanded="true" />
-            <element signature="docComment;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5095#5096#0" expanded="true" />
+            <element signature="e#5130#5131#0" expanded="true" />
+            <element signature="e#5160#5161#0" expanded="true" />
+            <element signature="e#5193#5194#0" expanded="true" />
+            <element signature="e#5229#5230#0" expanded="true" />
+            <element signature="e#5268#5269#0" expanded="true" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
+            <element signature="e#5416#5417#0" expanded="true" />
+            <element signature="e#5471#5472#0" expanded="true" />
+            <element signature="e#5525#5526#0" expanded="true" />
+            <element signature="e#5566#5567#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
+            <element signature="e#5643#5644#0" expanded="true" />
+            <element signature="e#5679#5680#0" expanded="true" />
+            <element signature="e#5728#5729#0" expanded="true" />
+            <element signature="e#5776#5777#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5857#5858#0" expanded="true" />
+            <element signature="e#5900#5901#0" expanded="true" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6031#6032#0" expanded="true" />
+            <element signature="e#6083#6084#0" expanded="true" />
+            <element signature="e#6126#6127#0" expanded="true" />
+            <element signature="docComment;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#6634#6635#0" expanded="true" />
+            <element signature="e#6678#6679#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+            <element signature="e#6759#6760#0" expanded="true" />
+            <element signature="e#6793#6794#0" expanded="true" />
+            <element signature="e#6830#6831#0" expanded="true" />
+            <element signature="e#6862#6863#0" expanded="true" />
+            <element signature="e#6897#6898#0" expanded="true" />
+            <element signature="e#6947#6948#0" expanded="true" />
+            <element signature="e#6994#6995#0" expanded="true" />
+            <element signature="docComment;method#DeprecatedFlowGraph#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#addEdge#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#addFlow#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#9269#9270#0" expanded="true" />
+            <element signature="e#9326#9327#0" expanded="true" />
+            <element signature="e#9384#9385#0" expanded="true" />
+            <element signature="e#9431#9432#0" expanded="true" />
+            <element signature="e#10118#10119#0" expanded="true" />
+            <element signature="e#10166#10167#0" expanded="true" />
+            <element signature="e#10227#10228#0" expanded="true" />
+            <element signature="e#10294#10295#0" expanded="true" />
+            <element signature="e#10565#10566#0" expanded="true" />
+            <element signature="e#10602#10603#0" expanded="true" />
+            <element signature="e#10885#10886#0" expanded="true" />
+            <element signature="e#10921#10922#0" expanded="true" />
             <element signature="class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#8153#8154#0" expanded="true" />
-            <element signature="e#8197#8198#0" expanded="true" />
-            <element signature="e#8238#8239#0" expanded="true" />
-            <element signature="e#8278#8279#0" expanded="true" />
-            <element signature="e#8312#8313#0" expanded="true" />
-            <element signature="e#8349#8350#0" expanded="true" />
-            <element signature="e#8381#8382#0" expanded="true" />
-            <element signature="e#8416#8417#0" expanded="true" />
-            <element signature="e#8466#8467#0" expanded="true" />
-            <element signature="e#8513#8514#0" expanded="true" />
-            <element signature="docComment;method#FlowGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="docComment;method#addEdge#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="method#addFlow#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#10778#10779#0" expanded="true" />
-            <element signature="e#10835#10836#0" expanded="true" />
-            <element signature="e#10893#10894#0" expanded="true" />
-            <element signature="e#10940#10941#0" expanded="true" />
-            <element signature="e#11597#11598#0" expanded="true" />
-            <element signature="e#11645#11646#0" expanded="true" />
-            <element signature="e#11706#11707#0" expanded="true" />
-            <element signature="e#11773#11774#0" expanded="true" />
-            <element signature="e#12044#12045#0" expanded="true" />
-            <element signature="e#12081#12082#0" expanded="true" />
-            <element signature="e#12364#12365#0" expanded="true" />
-            <element signature="e#12400#12401#0" expanded="true" />
-            <element signature="docComment;class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="e#12632#12633#0" expanded="true" />
-            <element signature="e#12682#12683#0" expanded="true" />
-            <element signature="e#12922#12923#0" expanded="true" />
-            <element signature="e#12962#12963#0" expanded="true" />
-            <element signature="e#13094#13095#0" expanded="true" />
-            <element signature="e#13136#13137#0" expanded="true" />
-            <element signature="e#13248#13249#0" expanded="true" />
-            <element signature="e#13288#13289#0" expanded="true" />
-            <element signature="e#13323#13324#0" expanded="true" />
-            <element signature="e#13369#13370#0" expanded="true" />
-            <element signature="e#15738#15739#0" expanded="true" />
-            <element signature="e#15777#15778#0" expanded="true" />
+            <element signature="method#flowGraphToArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createReverseGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
+            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
+            <element signature="e#16228#16229#0" expanded="true" />
+            <element signature="e#16267#16268#0" expanded="true" />
+            <element signature="method#run#0;class#Circulation#0" expanded="false" />
             <element signature="method#input#0;class#Circulation#0" expanded="false" />
             <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Inputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17545#17546#0" expanded="true" />
-            <element signature="e#17577#17578#0" expanded="true" />
-            <element signature="e#17613#17614#0" expanded="true" />
-            <element signature="e#17648#17649#0" expanded="true" />
+            <element signature="e#18035#18036#0" expanded="true" />
+            <element signature="e#18067#18068#0" expanded="true" />
+            <element signature="e#18103#18104#0" expanded="true" />
+            <element signature="e#18138#18139#0" expanded="true" />
             <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17846#17847#0" expanded="true" />
-            <element signature="e#17891#17892#0" expanded="true" />
-            <element signature="e#17932#17933#0" expanded="true" />
-            <element signature="e#17979#17980#0" expanded="true" />
+            <element signature="e#18336#18337#0" expanded="true" />
+            <element signature="e#18381#18382#0" expanded="true" />
+            <element signature="e#18422#18423#0" expanded="true" />
+            <element signature="e#18469#18470#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Circulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#Circulation#0" expanded="false" />
             <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
             <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
             <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
-            <element signature="method#findPathBfs#0;class#Circulation#0" expanded="false" />
-            <element signature="method#drawPathFromStepBack#0;class#Circulation#0" expanded="false" />
             <element signature="method#buildGraph#0;class#Circulation#0" expanded="false" />
             <element signature="class#Edge#0;class#Circulation#0" expanded="false" />
-            <element signature="e#6556#6557#0" expanded="true" />
-            <element signature="e#6592#6593#0" expanded="true" />
-            <element signature="e#6624#6625#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6689#6690#0" expanded="true" />
-            <element signature="e#6722#6723#0" expanded="true" />
-            <element signature="e#6758#6759#0" expanded="true" />
-            <element signature="e#6797#6798#0" expanded="true" />
-            <element signature="e#6836#6837#0" expanded="true" />
-            <element signature="e#6878#6879#0" expanded="true" />
-            <element signature="e#6910#6911#0" expanded="true" />
-            <element signature="e#6945#6946#0" expanded="true" />
-            <element signature="e#7000#7001#0" expanded="true" />
-            <element signature="e#7054#7055#0" expanded="true" />
-            <element signature="e#7095#7096#0" expanded="true" />
-            <element signature="e#7135#7136#0" expanded="true" />
-            <element signature="e#7172#7173#0" expanded="true" />
-            <element signature="e#7208#7209#0" expanded="true" />
-            <element signature="e#7257#7258#0" expanded="true" />
-            <element signature="e#7305#7306#0" expanded="true" />
-            <element signature="e#7346#7347#0" expanded="true" />
-            <element signature="e#7386#7387#0" expanded="true" />
-            <element signature="e#7429#7430#0" expanded="true" />
-            <element signature="e#7471#7472#0" expanded="true" />
-            <element signature="e#7520#7521#0" expanded="true" />
-            <element signature="e#7560#7561#0" expanded="true" />
-            <element signature="e#7612#7613#0" expanded="true" />
-            <element signature="e#7655#7656#0" expanded="true" />
-            <element signature="docComment;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5095#5096#0" expanded="true" />
+            <element signature="e#5130#5131#0" expanded="true" />
+            <element signature="e#5160#5161#0" expanded="true" />
+            <element signature="e#5193#5194#0" expanded="true" />
+            <element signature="e#5229#5230#0" expanded="true" />
+            <element signature="e#5268#5269#0" expanded="true" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
+            <element signature="e#5416#5417#0" expanded="true" />
+            <element signature="e#5471#5472#0" expanded="true" />
+            <element signature="e#5525#5526#0" expanded="true" />
+            <element signature="e#5566#5567#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
+            <element signature="e#5643#5644#0" expanded="true" />
+            <element signature="e#5679#5680#0" expanded="true" />
+            <element signature="e#5728#5729#0" expanded="true" />
+            <element signature="e#5776#5777#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5857#5858#0" expanded="true" />
+            <element signature="e#5900#5901#0" expanded="true" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6031#6032#0" expanded="true" />
+            <element signature="e#6083#6084#0" expanded="true" />
+            <element signature="e#6126#6127#0" expanded="true" />
+            <element signature="docComment;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#6634#6635#0" expanded="true" />
+            <element signature="e#6678#6679#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+            <element signature="e#6759#6760#0" expanded="true" />
+            <element signature="e#6793#6794#0" expanded="true" />
+            <element signature="e#6830#6831#0" expanded="true" />
+            <element signature="e#6862#6863#0" expanded="true" />
+            <element signature="e#6897#6898#0" expanded="true" />
+            <element signature="e#6947#6948#0" expanded="true" />
+            <element signature="e#6994#6995#0" expanded="true" />
+            <element signature="docComment;method#DeprecatedFlowGraph#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#addEdge#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#addFlow#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#9269#9270#0" expanded="true" />
+            <element signature="e#9326#9327#0" expanded="true" />
+            <element signature="e#9384#9385#0" expanded="true" />
+            <element signature="e#9431#9432#0" expanded="true" />
+            <element signature="e#10118#10119#0" expanded="true" />
+            <element signature="e#10166#10167#0" expanded="true" />
+            <element signature="e#10227#10228#0" expanded="true" />
+            <element signature="e#10294#10295#0" expanded="true" />
+            <element signature="e#10565#10566#0" expanded="true" />
+            <element signature="e#10602#10603#0" expanded="true" />
+            <element signature="e#10885#10886#0" expanded="true" />
+            <element signature="e#10921#10922#0" expanded="true" />
             <element signature="class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#8153#8154#0" expanded="true" />
-            <element signature="e#8197#8198#0" expanded="true" />
-            <element signature="e#8238#8239#0" expanded="true" />
-            <element signature="e#8278#8279#0" expanded="true" />
-            <element signature="e#8312#8313#0" expanded="true" />
-            <element signature="e#8349#8350#0" expanded="true" />
-            <element signature="e#8381#8382#0" expanded="true" />
-            <element signature="e#8416#8417#0" expanded="true" />
-            <element signature="e#8466#8467#0" expanded="true" />
-            <element signature="e#8513#8514#0" expanded="true" />
-            <element signature="docComment;method#FlowGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="docComment;method#addEdge#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="method#addFlow#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
-            <element signature="e#10778#10779#0" expanded="true" />
-            <element signature="e#10835#10836#0" expanded="true" />
-            <element signature="e#10893#10894#0" expanded="true" />
-            <element signature="e#10940#10941#0" expanded="true" />
-            <element signature="e#11597#11598#0" expanded="true" />
-            <element signature="e#11645#11646#0" expanded="true" />
-            <element signature="e#11706#11707#0" expanded="true" />
-            <element signature="e#11773#11774#0" expanded="true" />
-            <element signature="e#12044#12045#0" expanded="true" />
-            <element signature="e#12081#12082#0" expanded="true" />
-            <element signature="e#12364#12365#0" expanded="true" />
-            <element signature="e#12400#12401#0" expanded="true" />
-            <element signature="docComment;class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="class#FlowPath#0;class#Circulation#0" expanded="false" />
-            <element signature="e#12632#12633#0" expanded="true" />
-            <element signature="e#12682#12683#0" expanded="true" />
-            <element signature="e#12922#12923#0" expanded="true" />
-            <element signature="e#12962#12963#0" expanded="true" />
-            <element signature="e#13094#13095#0" expanded="true" />
-            <element signature="e#13136#13137#0" expanded="true" />
-            <element signature="e#13248#13249#0" expanded="true" />
-            <element signature="e#13288#13289#0" expanded="true" />
-            <element signature="e#13323#13324#0" expanded="true" />
-            <element signature="e#13369#13370#0" expanded="true" />
-            <element signature="e#15738#15739#0" expanded="true" />
-            <element signature="e#15777#15778#0" expanded="true" />
+            <element signature="method#flowGraphToArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createReverseGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
+            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
+            <element signature="e#16228#16229#0" expanded="true" />
+            <element signature="e#16267#16268#0" expanded="true" />
+            <element signature="method#run#0;class#Circulation#0" expanded="false" />
             <element signature="method#input#0;class#Circulation#0" expanded="false" />
             <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Inputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Input#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17545#17546#0" expanded="true" />
-            <element signature="e#17577#17578#0" expanded="true" />
-            <element signature="e#17613#17614#0" expanded="true" />
-            <element signature="e#17648#17649#0" expanded="true" />
+            <element signature="e#18035#18036#0" expanded="true" />
+            <element signature="e#18067#18068#0" expanded="true" />
+            <element signature="e#18103#18104#0" expanded="true" />
+            <element signature="e#18138#18139#0" expanded="true" />
             <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
             <element signature="class#Output#0;class#Circulation#0" expanded="false" />
-            <element signature="e#17846#17847#0" expanded="true" />
-            <element signature="e#17891#17892#0" expanded="true" />
-            <element signature="e#17932#17933#0" expanded="true" />
-            <element signature="e#17979#17980#0" expanded="true" />
+            <element signature="e#18336#18337#0" expanded="true" />
+            <element signature="e#18381#18382#0" expanded="true" />
+            <element signature="e#18422#18423#0" expanded="true" />
+            <element signature="e#18469#18470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Circulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="338" column="26" lean-forward="false" selection-start-line="338" selection-start-column="26" selection-end-line="338" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
+            <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
+            <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
+            <element signature="method#buildGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Edge#0;class#Circulation#0" expanded="false" />
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5095#5096#0" expanded="true" />
+            <element signature="e#5130#5131#0" expanded="true" />
+            <element signature="e#5160#5161#0" expanded="true" />
+            <element signature="e#5193#5194#0" expanded="true" />
+            <element signature="e#5229#5230#0" expanded="true" />
+            <element signature="e#5268#5269#0" expanded="true" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
+            <element signature="e#5416#5417#0" expanded="true" />
+            <element signature="e#5471#5472#0" expanded="true" />
+            <element signature="e#5525#5526#0" expanded="true" />
+            <element signature="e#5566#5567#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
+            <element signature="e#5643#5644#0" expanded="true" />
+            <element signature="e#5679#5680#0" expanded="true" />
+            <element signature="e#5728#5729#0" expanded="true" />
+            <element signature="e#5776#5777#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5857#5858#0" expanded="true" />
+            <element signature="e#5900#5901#0" expanded="true" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5991#5992#0" expanded="true" />
+            <element signature="e#6031#6032#0" expanded="true" />
+            <element signature="e#6083#6084#0" expanded="true" />
+            <element signature="e#6126#6127#0" expanded="true" />
+            <element signature="docComment;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#6634#6635#0" expanded="true" />
+            <element signature="e#6678#6679#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+            <element signature="e#6759#6760#0" expanded="true" />
+            <element signature="e#6793#6794#0" expanded="true" />
+            <element signature="e#6830#6831#0" expanded="true" />
+            <element signature="e#6862#6863#0" expanded="true" />
+            <element signature="e#6897#6898#0" expanded="true" />
+            <element signature="e#6947#6948#0" expanded="true" />
+            <element signature="e#6994#6995#0" expanded="true" />
+            <element signature="docComment;method#DeprecatedFlowGraph#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#addEdge#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#addFlow#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#9269#9270#0" expanded="true" />
+            <element signature="e#9326#9327#0" expanded="true" />
+            <element signature="e#9384#9385#0" expanded="true" />
+            <element signature="e#9431#9432#0" expanded="true" />
+            <element signature="e#10118#10119#0" expanded="true" />
+            <element signature="e#10166#10167#0" expanded="true" />
+            <element signature="e#10227#10228#0" expanded="true" />
+            <element signature="e#10294#10295#0" expanded="true" />
+            <element signature="e#10565#10566#0" expanded="true" />
+            <element signature="e#10602#10603#0" expanded="true" />
+            <element signature="e#10885#10886#0" expanded="true" />
+            <element signature="e#10921#10922#0" expanded="true" />
+            <element signature="class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#flowGraphToArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createReverseGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createNodeConnectionToEdgeArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#flowGraphToArray#0;class#Circulation#0" expanded="false" />
+            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
+            <element signature="e#16228#16229#0" expanded="true" />
+            <element signature="e#16267#16268#0" expanded="true" />
+            <element signature="method#run#0;class#Circulation#0" expanded="false" />
+            <element signature="method#input#0;class#Circulation#0" expanded="false" />
+            <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Inputter#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Input#0;class#Circulation#0" expanded="false" />
+            <element signature="e#18035#18036#0" expanded="true" />
+            <element signature="e#18067#18068#0" expanded="true" />
+            <element signature="e#18103#18104#0" expanded="true" />
+            <element signature="e#18138#18139#0" expanded="true" />
+            <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Output#0;class#Circulation#0" expanded="false" />
+            <element signature="e#18336#18337#0" expanded="true" />
+            <element signature="e#18381#18382#0" expanded="true" />
+            <element signature="e#18422#18423#0" expanded="true" />
+            <element signature="e#18469#18470#0" expanded="true" />
           </folding>
         </state>
       </provider>
