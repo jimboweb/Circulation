@@ -3,10 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-// TODO: 4/14/18 make two more 2d arrays: an array that connects node connections to paths, and one for the final flow
-// in other words, if edge 1 connects node 2 to node 3, then nodeToEdge[2][3] = 1,
-// and if the flow over edge 1 is 4, then [2][3] = 4
-// from that I can reconstruct the edge flows
 
 // TODO: 4/6/18 rewrite input function so it creates array graph from beginning
 
@@ -19,12 +15,25 @@ public class Circulation {
     }
 
     public void findCirculation(Inputter input, Outputter output){
-        DeprecatedFlowGraph graph = buildGraph(input);
-        graph = simplifyFlowGraph(graph);
-        int[][] arrayGraph = flowGraphToArray(graph);
-        int[][] nodeConnectionToEdge = createNodeConnectionToEdgeArray(graph);
-        int maxFlow = findMaxFlow(arrayGraph,graph.source,graph.sink);
-        System.out.println("Maxflow = " + maxFlow);
+        DeprecatedFlowGraph deprecatedFlowGraph = buildDeprecatedGraph(input);
+        deprecatedFlowGraph = simplifyFlowGraph(deprecatedFlowGraph);
+        FlowGraph graph = new FlowGraph(deprecatedFlowGraph);
+        graph = findMaxFlow(graph);
+        int[] edgeFlows = getEdgeFlow(graph);
+        for(int edgeFlow: edgeFlows){
+            System.out.println(edgeFlow);
+        }
+    }
+
+    private int[] getEdgeFlow(FlowGraph graph){
+        int[] edgeFlow = new int[graph.numEdges];
+        int[][] edges = graph.getEdges();
+        for(int v=0;v<edges.length;v++){
+            int from = edges[v][0];
+            int to = edges[v][1];
+            edgeFlow[v] = graph.getFlow(from,to) + graph.getMinCapacity(from, to);
+        }
+        return edgeFlow;
     }
 
     /**
@@ -36,22 +45,6 @@ public class Circulation {
         DeprecatedFlowGraph newGraph = removeMinDemand(originalGraph);
         newGraph = createSourceAndSink(newGraph);
         return newGraph;
-    }
-
-    private int[][] createNodeConnectionToEdgeArray(DeprecatedFlowGraph graph){
-        int numVertices = graph.size();
-        int[][] rtrn = new int[numVertices][numVertices];
-        for(int[] row:rtrn){
-            Arrays.fill(row,-1);
-        }
-        Iterator<Edge> edgeIterator = graph.getEdgeIteratorForGraph();
-        while(edgeIterator.hasNext()){
-            Edge e = edgeIterator.next();
-            int from = e.getFrom();
-            int to = e.getTo();
-            rtrn[from][to] = e.getIndex();
-        }
-        return rtrn;
     }
 
     private DeprecatedFlowGraph createSourceAndSink(DeprecatedFlowGraph newGraph) {
@@ -112,7 +105,7 @@ public class Circulation {
         return newGraph;
     }
 
-    private DeprecatedFlowGraph buildGraph(Inputter input){
+    private DeprecatedFlowGraph buildDeprecatedGraph(Inputter input){
         DeprecatedFlowGraph graph = new DeprecatedFlowGraph(input.getN());
         int[][] data = input.getData();
         for(int[] dataRow:data){
@@ -337,11 +330,17 @@ public class Circulation {
     }
 
     static class FlowGraph{
-        private int numVertices;
+        private final int numVertices;
+        private final int numEdges;
         private final int[][] mainGraph;
         private int[][] reverseGraph;
-        private final int[][] edgeNumbers;
+        private final int[][] edges;
         private int[][] flow;
+        private final int[][] minCapacity;
+        int source;
+        int sink;
+
+
 
         /**
          * until I get rid of deprecated flow graph
@@ -349,10 +348,14 @@ public class Circulation {
          */
         public FlowGraph(DeprecatedFlowGraph deprecatedFlowGraph){
             numVertices = deprecatedFlowGraph.size();
+            numEdges = deprecatedFlowGraph.edges.size()/2;
             mainGraph = flowGraphToArray(deprecatedFlowGraph);
-            edgeNumbers = createNodeConnectionToEdgeArray(deprecatedFlowGraph);
+            edges = createEdges(deprecatedFlowGraph, numEdges);
             reverseGraph = createReverseGraph(mainGraph);
             flow = new int[numVertices][numVertices];
+            minCapacity = createMinCapacity(deprecatedFlowGraph);
+            source = deprecatedFlowGraph.source;
+            sink = deprecatedFlowGraph.sink;
         }
         private int[][] flowGraphToArray(DeprecatedFlowGraph deprecatedFlowGraph){
             int numVertices = deprecatedFlowGraph.graph.size();
@@ -370,6 +373,15 @@ public class Circulation {
             return rtrn;
         }
 
+        private int[][] createMinCapacity(DeprecatedFlowGraph deprecatedFlowGraph){
+            int[][] minCapacity = new int[numVertices][numVertices];
+            Iterator<Edge> edgeIterator = deprecatedFlowGraph.getEdgeIteratorForGraph();
+            while (edgeIterator.hasNext()){
+                Edge e = edgeIterator.next();
+                minCapacity[e.getFrom()][e.getTo()] = e.getMinCapacity();
+            }
+            return minCapacity;
+        }
         private int[][] createReverseGraph(int[][] mainGraph){
 
             int[][] rtrn = new int[numVertices][numVertices];
@@ -380,17 +392,18 @@ public class Circulation {
             }
             return rtrn;
         }
-        private int[][] createNodeConnectionToEdgeArray(DeprecatedFlowGraph graph){
-            int[][] rtrn = new int[numVertices][numVertices];
-            for(int[] row:rtrn){
-                Arrays.fill(row,-1);
-            }
-            Iterator<Edge> edgeIterator = graph.getEdgeIteratorForGraph();
-            while(edgeIterator.hasNext()){
+        private int[][] createEdges(DeprecatedFlowGraph deprecatedFlowGraph, int numEdges){
+            int[][] rtrn = new int[numEdges][2];
+            Iterator<Edge> edgeIterator = deprecatedFlowGraph.getEdgeIteratorForGraph();
+            int edgeNumber = 0;
+            while (edgeIterator.hasNext()){
                 Edge e = edgeIterator.next();
-                int from = e.getFrom();
-                int to = e.getTo();
-                rtrn[from][to] = e.getIndex();
+                if(e.getIndex()%2!=0){
+                    continue;
+                }
+                rtrn[edgeNumber][0] = e.getFrom();
+                rtrn[edgeNumber][1] = e.getTo();
+                edgeNumber++;
             }
             return rtrn;
         }
@@ -399,79 +412,80 @@ public class Circulation {
             return numVertices;
         }
 
-        public int[][] getMainGraph() {
-            return mainGraph;
+        public int getCapacity(int from, int to){
+            return mainGraph[from][to];
         }
 
-        public int[][] getReverseGraph() {
-            return reverseGraph;
+        public int getMinCapacity(int from, int to){
+            return minCapacity[from][to];
         }
 
-        public void setReverseGraphAtIndex(int u, int v, int val){
-            reverseGraph[u][v] = val;
+        public int getReverseGraphCapacity(int from, int to){
+            return reverseGraph[from][to];
         }
 
-        public int[][] getEdgeNumbers() {
-            return edgeNumbers;
+        public void setReverseGraphCapacity(int from, int to, int val){
+            reverseGraph[from][to] = val;
+        }
+
+        public void changeReverseCapacity(int from, int to, int val){
+            reverseGraph[from][to] += val;
+        }
+
+        public int[][] getEdges() {
+            return edges;
         }
 
         public int[][] getFlow() {
             return flow;
         }
 
-        public void setFlowAtIndex(int u, int v, int val){
-            flow[u][v] = val;
+        public int getFlow(int from, int to) {
+            return flow[from][to];
+        }
+
+        public void setFlow(int from, int to, int amount){
+            flow[from][to] = amount;
+        }
+
+        public void changeFlow(int from, int to, int amount){
+            flow[from][to] += amount;
+        }
+
+        public int getNumEdges() {
+            return numEdges;
         }
     }
 
-    private int[][] flowGraphToArray(DeprecatedFlowGraph deprecatedFlowGraph){
-        int numVertices = deprecatedFlowGraph.graph.size();
-        int[][] rtrn = new int[numVertices][numVertices];
-        for(int i = 0; i< deprecatedFlowGraph.size(); i++){
-            List<Integer> node = deprecatedFlowGraph.getNode(i);
-            for(int edgeNum:node){
-                if(edgeNum%2!=0){
-                    continue;
-                }
-                Edge edge = deprecatedFlowGraph.getEdge(edgeNum);
-                rtrn[i][edge.getTo()]=edge.getCapacity();
-            }
-        }
-    return rtrn;
-    }
-
-    private int findMaxFlow(int[][] mainGraph, int s, int t){
+    private FlowGraph findMaxFlow(FlowGraph graph){
         int u;
         int v;
-        int numVertices = mainGraph.length;
+        int s = graph.source;
+        int t = graph.sink;
+        int numVertices = graph.getNumVertices();
 
-        int[][] reverseGraph = new int[numVertices][numVertices];
-
-        for(u=0;u<numVertices;u++){
-            for(v = 0; v< numVertices;v++){
-                reverseGraph[v][u] = mainGraph[u][v];
-            }
-        }
 
         int parent[] = new int[numVertices];
 
         int maxFlow = 0;
 
-        while (breadthFirstSearch(reverseGraph,s,t,parent)){
+        while (breadthFirstSearch(graph,s,t,parent)){
             int pathFlow = Integer.MAX_VALUE;
 
             v = t;
             while(v!=s){
                 u=parent[v];
-                pathFlow = Math.min(pathFlow, reverseGraph[u][v]);
+                pathFlow = Math.min(pathFlow, graph.getReverseGraphCapacity(u,v));
                 v=u;
             }
 
             v = t;
             while(v!=s){
                 u = parent[v];
-                reverseGraph[u][v] -= pathFlow;
-                reverseGraph[v][u] += pathFlow;
+
+                graph.changeReverseCapacity(u,v,-pathFlow);
+                graph.changeReverseCapacity(v,u,pathFlow);
+                graph.changeFlow(v,u,pathFlow);
                 v = u;
             }
 
@@ -479,12 +493,12 @@ public class Circulation {
         }
 
 
-        return maxFlow;
+        return graph;
 
     }
 
-    private boolean breadthFirstSearch(int[][] reverseGraph, int s, int t, int[] parent){
-        int numVertices = reverseGraph.length;
+    private boolean breadthFirstSearch(FlowGraph graph, int s, int t, int[] parent){
+        int numVertices = graph.getNumVertices();
         boolean visited[] = new boolean[numVertices];
         Arrays.fill(visited,false);
 
@@ -499,7 +513,7 @@ public class Circulation {
             int u = queue.poll();
 
             for(int v=0;v<numVertices;v++){
-                if(!visited[v] && reverseGraph[u][v]>0){
+                if(!visited[v] && graph.getReverseGraphCapacity(u,v)>0){
                     queue.add(v);
                     parent[v]=u;
                     visited[v] = true;
