@@ -4,6 +4,8 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 
+// TODO: 4/21/18 make it work for graph with minflow of 0 
+// TODO: 4/21/18 TASK 0:make it output NO for graph with no circulation
 // TODO: 4/6/18 rewrite input function so it creates array graph from beginning
 
 
@@ -20,6 +22,7 @@ public class Circulation {
         FlowGraph graph = new FlowGraph(deprecatedFlowGraph);
         graph = findMaxFlow(graph);
         int[] edgeFlows = getEdgeFlow(graph);
+        // TODO: 4/21/18 TASK 0 STEP 2: call graph.isFullCircuit, print YES or NO, if statement to continue
         for(int edgeFlow: edgeFlows){
             System.out.println(edgeFlow);
         }
@@ -187,6 +190,7 @@ public class Circulation {
      * A graph with an array of edges and a list of integer node links to edges
      */
     static class DeprecatedFlowGraph {
+        private int originalNumEdges = 0;
         /* List of all - forward and backward - edges */
         private List<Edge> edges;
         private int source = -1;
@@ -249,6 +253,7 @@ public class Circulation {
             edges.add(forwardEdge);
             graph.get(to).add(edges.size());
             edges.add(backwardEdge);
+            originalNumEdges++;
         }
 
         /**
@@ -330,8 +335,10 @@ public class Circulation {
     }
 
     static class FlowGraph{
+        // TODO: 4/21/18 TASK 0 STEP 0: add demand array for edges
         private final int numVertices;
         private final int numEdges;
+        private int originalNumEdges;
         private final int[][] mainGraph;
         private int[][] reverseGraph;
         private final int[][] edges;
@@ -354,8 +361,10 @@ public class Circulation {
             reverseGraph = createReverseGraph(mainGraph);
             flow = new int[numVertices][numVertices];
             minCapacity = createMinCapacity(deprecatedFlowGraph);
+            // TODO: 4/21/18 TASK 0 STEP 0: make a source and sink even if there isn't one 
             source = deprecatedFlowGraph.source;
             sink = deprecatedFlowGraph.sink;
+            originalNumEdges = deprecatedFlowGraph.originalNumEdges;
         }
         private int[][] flowGraphToArray(DeprecatedFlowGraph deprecatedFlowGraph){
             int numVertices = deprecatedFlowGraph.graph.size();
@@ -455,6 +464,20 @@ public class Circulation {
         public int getNumEdges() {
             return numEdges;
         }
+
+        public int getOriginalNumEdges() {
+            return originalNumEdges;
+        }
+
+        // TODO: 4/21/18 TASK 0 STEP 1: see if input and output of edges equals demand
+        /**
+         * determine if graph has a circuit.
+         * will determine the YES/NO output
+         * @return true if graph has a circuit, false if not
+         */
+        public boolean isFullCircuit(){
+            return false;
+        }
     }
 
     private FlowGraph findMaxFlow(FlowGraph graph){
@@ -505,6 +528,7 @@ public class Circulation {
         Deque<Integer> queue = new ArrayDeque<>();
 
         queue.add(s);
+        // FIXME: 4/21/18 TASK 1 STEP 0: bug is here; when source and sink aren't declared I'm calling visited[-1]
         visited[s] = true;
         parent[s] = -1;
 
