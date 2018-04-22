@@ -361,9 +361,9 @@ public class Circulation {
             reverseGraph = createReverseGraph(mainGraph);
             flow = new int[numVertices][numVertices];
             minCapacity = createMinCapacity(deprecatedFlowGraph);
-            // TODO: 4/21/18 TASK 0 STEP 0: make a source and sink even if there isn't one 
-            source = deprecatedFlowGraph.source;
-            sink = deprecatedFlowGraph.sink;
+            
+            source = deprecatedFlowGraph.source==-1?0:deprecatedFlowGraph.source;
+            sink = deprecatedFlowGraph.sink==-1?deprecatedFlowGraph.size()-1:deprecatedFlowGraph.sink;
             originalNumEdges = deprecatedFlowGraph.originalNumEdges;
         }
         private int[][] flowGraphToArray(DeprecatedFlowGraph deprecatedFlowGraph){
