@@ -16,6 +16,7 @@ public class Circulation {
     }
 
     public void findCirculation(Inputter input, Outputter output){
+        int originalNumEdges = input.getData().length;
         DeprecatedFlowGraph deprecatedFlowGraph = buildDeprecatedGraph(input);
         deprecatedFlowGraph = simplifyFlowGraph(deprecatedFlowGraph);
         FlowGraph graph = new FlowGraph(deprecatedFlowGraph);
@@ -23,11 +24,12 @@ public class Circulation {
         int[] edgeFlows = getEdgeFlow(graph);
         if(graph.isFullCircuit()) {
             System.out.println("YES");
-            for (int edgeFlow : edgeFlows) {
+            for (int i=0;i<originalNumEdges;i++) {
+                int edgeFlow = edgeFlows[i];
                 System.out.println(edgeFlow);
             }
         } else {
-            System.out.println("No");
+            System.out.println("NO");
         }
     }
 
@@ -67,12 +69,12 @@ public class Circulation {
     }
 
     /**
-     * sets a source or sink, links to demand node and removes deman
+     * sets a sink or source, links to demand node and removes deman
      * @param newGraph
      * @param sourceOrSink
      * @param i
      * @param demand
-     * @return the number of the source or sink
+     * @return the number of the sink or source
      * 
      */
     private int getSourceOrSink(DeprecatedFlowGraph newGraph, boolean source, int i, int demand) {
@@ -346,8 +348,8 @@ public class Circulation {
         private final int[][] edges;
         private int[][] flow;
         private final int[][] minCapacity;
-        int source;
         int sink;
+        int source;
         int sourceDemand;
         int sinkDemand;
 
@@ -366,11 +368,11 @@ public class Circulation {
             flow = new int[numVertices][numVertices];
             minCapacity = createMinCapacity(deprecatedFlowGraph);
 
-            source = deprecatedFlowGraph.source==-1?0:deprecatedFlowGraph.source;
-            sink = deprecatedFlowGraph.sink==-1?deprecatedFlowGraph.size()-1:deprecatedFlowGraph.sink;
+            sink = deprecatedFlowGraph.source==-1?0:deprecatedFlowGraph.source;
+            source = deprecatedFlowGraph.sink==-1?deprecatedFlowGraph.size()-1:deprecatedFlowGraph.sink;
             originalNumEdges = deprecatedFlowGraph.originalNumEdges;
-            sourceDemand = deprecatedFlowGraph.demand.get(source);
-            sinkDemand = deprecatedFlowGraph.demand.get(sink);
+            sourceDemand = deprecatedFlowGraph.demand.get(sink);
+            sinkDemand = deprecatedFlowGraph.demand.get(source);
         }
         private int[][] flowGraphToArray(DeprecatedFlowGraph deprecatedFlowGraph){
             int numVertices = deprecatedFlowGraph.graph.size();
@@ -486,15 +488,15 @@ public class Circulation {
                 sinkFlow[i] = flow[i][sink];
             }
             boolean rtrn = true;
-            rtrn &= sourceOrSinkSatisfied(sourceDemand,reverseGraph[sink]);
-            rtrn &= sourceOrSinkSatisfied(sourceOrSinkSatisfied(),sinkFlow);
+            rtrn &= sourceOrSinkSatisfied(sinkDemand,flow[source]);
+            rtrn &= sourceOrSinkSatisfied(sourceDemand,sinkFlow);
             return rtrn;
         }
 
         /**
-         * sum the flow for the source or sink and see if it meets the negative or positive demand
-         * @param demand positive or negative demand for source or sink
-         * @param flows array of flow out of source or into sink
+         * sum the flow for the sink or source and see if it meets the negative or positive demand
+         * @param demand positive or negative demand for sink or source
+         * @param flows array of flow out of sink or into source
          * @return
          */
         private boolean sourceOrSinkSatisfied(int demand, int[] flows){
@@ -509,8 +511,8 @@ public class Circulation {
     private FlowGraph findMaxFlow(FlowGraph graph){
         int u;
         int v;
-        int s = graph.source;
-        int t = graph.sink;
+        int s = graph.sink;
+        int t = graph.source;
         int numVertices = graph.getNumVertices();
 
 
