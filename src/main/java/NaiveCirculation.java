@@ -24,4 +24,8 @@
 
 
 public class NaiveCirculation {
+    public int[] findCirculation(Circulation.FlowGraph graph){
+
+        return new int[0];
+    }
 }

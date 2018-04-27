@@ -519,7 +519,7 @@ public class Circulation {
         }
     }
 
-    private FlowGraph findMaxFlow(FlowGraph graph){
+    public FlowGraph findMaxFlow(FlowGraph graph){
         int u;
         int v;
         int s = graph.sink;
