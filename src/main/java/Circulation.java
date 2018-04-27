@@ -374,6 +374,15 @@ public class Circulation {
             sourceDemand = deprecatedFlowGraph.demand.get(sink);
             sinkDemand = deprecatedFlowGraph.demand.get(source);
         }
+
+        public FlowGraph(int numVertices, int numEdges, int[][] minCapacity, int[][] mainGraph, int[][] edges) {
+            this.numVertices = numVertices;
+            this.numEdges = numEdges;
+            this.mainGraph = mainGraph;
+            this.edges = edges;
+            this.minCapacity = minCapacity;
+        }
+
         private int[][] flowGraphToArray(DeprecatedFlowGraph deprecatedFlowGraph){
             int numVertices = deprecatedFlowGraph.graph.size();
             int[][] rtrn = new int[numVertices][numVertices];
@@ -476,6 +485,8 @@ public class Circulation {
         public int getOriginalNumEdges() {
             return originalNumEdges;
         }
+
+
 
         /**
          * determine if graph has a circuit.
