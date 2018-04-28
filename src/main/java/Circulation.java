@@ -486,7 +486,9 @@ public class Circulation {
             return originalNumEdges;
         }
 
-
+        public int[][] getMinCapacity() {
+            return minCapacity;
+        }
 
         /**
          * determine if graph has a circuit.
