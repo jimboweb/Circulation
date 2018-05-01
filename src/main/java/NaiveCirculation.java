@@ -23,19 +23,18 @@
  */
 
 
+import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.List;
+
 
 public class NaiveCirculation {
     public int[] findCirculation(Circulation.FlowGraph graph){
         int numEdges = graph.getNumEdges();
         int[] flows = new int[numEdges];
         int[][] edges = graph.getEdges();
-        int[][] reverseEdgeLookup = new int[graph.getNumVertices()][graph.getNumVertices()];
-        for(int i=0;i<edges.length;i++){
-            int from = edges[i][0];
-            int to = edges[i][1];
-            reverseEdgeLookup[from][to] = i;
-        }
+        int[][] reverseEdgeLookup = getReverseEdgeLookup(graph, edges);
+        List<List<Integer>> prevEdges = getPrevEdges(numEdges);
         int[][] minCapacities = graph.getMinCapacity();
         BitSet edgesSatisfied = new BitSet(numEdges);
         int currentEdgeNum = 0;
@@ -46,20 +45,62 @@ public class NaiveCirculation {
             int flow = graph.getMinCapacity(from, to);
             edgesSatisfied.set(currentEdgeNum);
             flows[currentEdgeNum] = flow;
-            for(int i=0;i<minCapacities[to].length;i++){
-                int demand = minCapacities[to][i];
-                int nextEdge = reverseEdgeLookup[to][i];
-                // TODO: 4/28/18 set the flow of the next edge to demand
-                // subtract demand from flow
-                // if flow runs out increase flow of current edge
-                // if flow of current edge is over maxCapacity fail
-                // call increaseFlowBackwards to current flow
+            if(!setNextEdges(flows, reverseEdgeLookup[to], prevEdges.get(currentEdgeNum), minCapacities[to],  flow)){
+                return new int[0];
+            }
+            currentEdgeNum=(currentEdgeNum+1)%numEdges;
+        }
+        return flows;
+    }
+
+    private boolean setNextEdges(int[] flows, int[] ints, List<Integer> integers, int[] minCapacity, int flow) {
+        for(int i = 0; i< minCapacity.length; i++){
+            int demand = minCapacity[i];
+            int nextEdge = ints[i];
+            flow = checkAndUpdateFlow(flow, demand, nextEdge);
+            if(flow<0){
+                    return false;
+            }
+            flows[nextEdge] = demand;
+            integers.add(nextEdge);
+
+        }
+        return true;
+    }
+
+    private int checkAndUpdateFlow(int flow, int demand, int nextEdge) {
+        if(flow<demand){
+            int newFlow = flow+demand;
+            if(increaseFlowBackwards(nextEdge,newFlow)){
+                flow=newFlow;
+            } else {
+                return new -1; //fail if previous min cpacities don't allow flow
             }
         }
-        return new int[0];
+        return flow;
+    }
+
+    private List<List<Integer>> getPrevEdges(int numEdges) {
+        List<List<Integer>> prevEdges = new ArrayList<>();
+        for(int i=0;i<numEdges;i++){
+            prevEdges.add(new ArrayList<>());
+        }
+        return prevEdges;
+    }
+
+    private int[][] getReverseEdgeLookup(Circulation.FlowGraph graph, int[][] edges) {
+        int[][] reverseEdgeLookup = new int[graph.getNumVertices()][graph.getNumVertices()];
+        for(int i=0;i<edges.length;i++){
+            int from = edges[i][0];
+            int to = edges[i][1];
+            reverseEdgeLookup[from][to] = i;
+        }
+        return reverseEdgeLookup;
     }
 
     private boolean increaseFlowBackwards(int edgeNum, int newFlow){
-
+        // TODO: 5/1/18 cycle back through previous edges to get enough flow. will probably have to be recursive
+        // return true at 0, return false if you can't get the flow
+        return false;
     }
 }
