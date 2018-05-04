@@ -203,10 +203,9 @@
       <file leaf-file-name="NaiveCirculation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/NaiveCirculation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#3771#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -553,8 +552,8 @@
     <panes>
       <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -801,7 +800,8 @@
       <workItem from="1524833464562" duration="837000" />
       <workItem from="1524864751997" duration="5325000" />
       <workItem from="1524922150494" duration="4785000" />
-      <workItem from="1525207979318" duration="2128000" />
+      <workItem from="1525207979318" duration="2295000" />
+      <workItem from="1525468834719" duration="3325000" />
     </task>
     <servers />
   </component>
@@ -838,7 +838,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110125000" />
+    <option name="totallyTimeSpent" value="113617000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -855,7 +855,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.4914163" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32648125" sideWeight="0.47424892" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32648125" sideWeight="0.47424892" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -866,7 +866,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2811159" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2846924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933232" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -892,14 +892,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/NaiveCirculation.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="290" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -912,6 +904,156 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Circulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="488" column="41" lean-forward="false" selection-start-line="488" selection-start-column="41" selection-end-line="488" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="method#findCirculation#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#simplifyFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createSourceAndSink#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
+            <element signature="method#getSourceOrSink#0;class#Circulation#0" expanded="false" />
+            <element signature="method#removeMinDemand#0;class#Circulation#0" expanded="false" />
+            <element signature="method#buildDeprecatedGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Edge#0;class#Circulation#0" expanded="false" />
+            <element signature="e#4924#4925#0" expanded="true" />
+            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#4992#4993#0" expanded="true" />
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5057#5058#0" expanded="true" />
+            <element signature="e#5090#5091#0" expanded="true" />
+            <element signature="e#5126#5127#0" expanded="true" />
+            <element signature="e#5165#5166#0" expanded="true" />
+            <element signature="e#5204#5205#0" expanded="true" />
+            <element signature="e#5246#5247#0" expanded="true" />
+            <element signature="e#5278#5279#0" expanded="true" />
+            <element signature="e#5313#5314#0" expanded="true" />
+            <element signature="e#5368#5369#0" expanded="true" />
+            <element signature="e#5422#5423#0" expanded="true" />
+            <element signature="e#5463#5464#0" expanded="true" />
+            <element signature="e#5503#5504#0" expanded="true" />
+            <element signature="e#5540#5541#0" expanded="true" />
+            <element signature="e#5576#5577#0" expanded="true" />
+            <element signature="e#5625#5626#0" expanded="true" />
+            <element signature="e#5673#5674#0" expanded="true" />
+            <element signature="e#5714#5715#0" expanded="true" />
+            <element signature="e#5754#5755#0" expanded="true" />
+            <element signature="e#5797#5798#0" expanded="true" />
+            <element signature="e#5839#5840#0" expanded="true" />
+            <element signature="e#5888#5889#0" expanded="true" />
+            <element signature="e#5928#5929#0" expanded="true" />
+            <element signature="e#5980#5981#0" expanded="true" />
+            <element signature="e#6023#6024#0" expanded="true" />
+            <element signature="docComment;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#6573#6574#0" expanded="true" />
+            <element signature="e#6617#6618#0" expanded="true" />
+            <element signature="e#6658#6659#0" expanded="true" />
+            <element signature="e#6698#6699#0" expanded="true" />
+            <element signature="e#6732#6733#0" expanded="true" />
+            <element signature="e#6769#6770#0" expanded="true" />
+            <element signature="e#6801#6802#0" expanded="true" />
+            <element signature="e#6836#6837#0" expanded="true" />
+            <element signature="e#6886#6887#0" expanded="true" />
+            <element signature="e#6933#6934#0" expanded="true" />
+            <element signature="docComment;method#DeprecatedFlowGraph#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="docComment;method#addEdge#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#addFlow#0;class#DeprecatedFlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#9240#9241#0" expanded="true" />
+            <element signature="e#9297#9298#0" expanded="true" />
+            <element signature="e#9355#9356#0" expanded="true" />
+            <element signature="e#9402#9403#0" expanded="true" />
+            <element signature="e#10089#10090#0" expanded="true" />
+            <element signature="e#10137#10138#0" expanded="true" />
+            <element signature="e#10198#10199#0" expanded="true" />
+            <element signature="e#10265#10266#0" expanded="true" />
+            <element signature="e#10536#10537#0" expanded="true" />
+            <element signature="e#10573#10574#0" expanded="true" />
+            <element signature="e#10856#10857#0" expanded="true" />
+            <element signature="e#10892#10893#0" expanded="true" />
+            <element signature="method#FlowGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#FlowGraph#1;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#flowGraphToArray#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createMinCapacity#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createReverseGraph#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="method#createEdges#0;class#FlowGraph#0;class#Circulation#0" expanded="false" />
+            <element signature="e#14770#14771#0" expanded="true" />
+            <element signature="e#14812#14813#0" expanded="true" />
+            <element signature="e#14863#14864#0" expanded="true" />
+            <element signature="e#14913#14914#0" expanded="true" />
+            <element signature="e#14967#14968#0" expanded="true" />
+            <element signature="e#15019#15020#0" expanded="true" />
+            <element signature="e#15082#15083#0" expanded="true" />
+            <element signature="e#15135#15136#0" expanded="true" />
+            <element signature="e#15208#15209#0" expanded="true" />
+            <element signature="e#15260#15261#0" expanded="true" />
+            <element signature="e#15331#15332#0" expanded="true" />
+            <element signature="e#15384#15385#0" expanded="true" />
+            <element signature="e#15421#15422#0" expanded="true" />
+            <element signature="e#15457#15458#0" expanded="true" />
+            <element signature="e#15493#15494#0" expanded="true" />
+            <element signature="e#15528#15529#0" expanded="true" />
+            <element signature="e#15576#15577#0" expanded="true" />
+            <element signature="e#15621#15622#0" expanded="true" />
+            <element signature="e#15681#15682#0" expanded="true" />
+            <element signature="e#15728#15729#0" expanded="true" />
+            <element signature="e#15791#15792#0" expanded="true" />
+            <element signature="e#15839#15840#0" expanded="true" />
+            <element signature="e#15875#15876#0" expanded="true" />
+            <element signature="e#15914#15915#0" expanded="true" />
+            <element signature="e#15958#15959#0" expanded="true" />
+            <element signature="e#16005#16006#0" expanded="true" />
+            <element signature="e#16090#16091#0" expanded="true" />
+            <element signature="method#findMaxFlow#0;class#Circulation#0" expanded="false" />
+            <element signature="method#breadthFirstSearch#0;class#Circulation#0" expanded="false" />
+            <element signature="e#18871#18872#0" expanded="true" />
+            <element signature="e#18910#18911#0" expanded="true" />
+            <element signature="method#run#0;class#Circulation#0" expanded="false" />
+            <element signature="method#input#0;class#Circulation#0" expanded="false" />
+            <element signature="class#FastScanner#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Inputter#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Input#0;class#Circulation#0" expanded="false" />
+            <element signature="e#20678#20679#0" expanded="true" />
+            <element signature="e#20710#20711#0" expanded="true" />
+            <element signature="e#20746#20747#0" expanded="true" />
+            <element signature="e#20781#20782#0" expanded="true" />
+            <element signature="class#Outputter#0;class#Circulation#0" expanded="false" />
+            <element signature="class#Output#0;class#Circulation#0" expanded="false" />
+            <element signature="e#20979#20980#0" expanded="true" />
+            <element signature="e#21024#21025#0" expanded="true" />
+            <element signature="e#21065#21066#0" expanded="true" />
+            <element signature="e#21112#21113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CirculationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/NaiveCirculation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="23" lean-forward="false" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Circulation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1057,7 +1199,6 @@
         <state relative-caret-position="465">
           <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
           <folding>
-            <element signature="e#0#3771#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1208,7 +1349,6 @@
         <state relative-caret-position="90">
           <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
           <folding>
-            <element signature="e#0#3771#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1475,7 +1615,6 @@
         <state relative-caret-position="285">
           <caret line="19" column="111" lean-forward="false" selection-start-line="19" selection-start-column="111" selection-end-line="19" selection-end-column="111" />
           <folding>
-            <element signature="e#0#3771#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1626,7 +1765,6 @@
         <state relative-caret-position="285">
           <caret line="19" column="111" lean-forward="false" selection-start-line="19" selection-start-column="111" selection-end-line="19" selection-end-column="111" />
           <folding>
-            <element signature="e#0#3771#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -2689,10 +2827,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/NaiveCirculation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3771#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
