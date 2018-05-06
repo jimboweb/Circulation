@@ -20,9 +20,9 @@ public class CirculationTest {
     Circulation instance = new Circulation();
     NaiveCirculation naiveCirculation = new NaiveCirculation();
     Random rnd;
-    int maxEdges = 20;
-    int maxMinFlow = 10;
-    int maxMaxFlowOverMin = 10;
+    int maxEdges = 5;
+    int maxMinFlow = 3;
+    int maxMaxFlowOverMin = 3;
 
     public CirculationTest() {
         rnd = new Random();
@@ -30,9 +30,23 @@ public class CirculationTest {
 
 
     @Test
+    public void testNaiveCirculation(){
+        int n = 3;
+        int m = 3;
+        int[][] minCapacity = {{0,1,0},{0,0,2},{1,0,0}};
+        int[][] mainGraph = {{0,2,0},{0,0,4},{2,0,0}};
+        int[][] edges = {{0,1},{1,2},{2,1}};
+        Circulation.FlowGraph graph = new Circulation.FlowGraph(n,m,minCapacity,mainGraph,edges);
+        NaiveCirculation naiveCirculation = new NaiveCirculation();
+        int[] correctCirculation = {2,2,2};
+        int[] circulation = naiveCirculation.findCirculation(graph);
+        assertArrayEquals(circulation,correctCirculation);
+    }
+
+    @Test
     public void testFindCirculation() {
 
-        int n = rnd.nextInt(maxEdges);
+        int n = rnd.nextInt(maxEdges)+3;
         int m = 0;
         Circulation.FlowGraph testGraph = makeFlowGraph(n, m);
         int[] correctFlows = naiveCirculation.findCirculation(testGraph);
@@ -57,9 +71,11 @@ public class CirculationTest {
 
     private Circulation.FlowGraph makeFlowGraph(int n, int m){
         Circulation.FlowGraph rtrn;
-        while(m<n){
-            m=rnd.nextInt(triangular(n));
-        }
+
+        int maxEdges = triangular(n);
+        int diff = maxEdges-n;
+        m=rnd.nextInt(diff)+n;
+
         int[][] edgeMinFlow = new int[n][n];
         int[][] edgeMaxFlow = new int[n][n];
         int[][] edgeNums = new int[m][2];

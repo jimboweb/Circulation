@@ -28,10 +28,10 @@ public class NaiveCirculation {
         return flows;
     }
 
-    private boolean setNextEdges(int[] flows, int[] ints, List<Integer> integers, int[] minCapacity, int flow, ArrayList<ArrayList<Integer>> prevEdges, int[][] minCapacities, int[][] edges) {
+    private boolean setNextEdges(int[] flows, int[] reversEdgeLookup, List<Integer> integers, int[] minCapacity, int flow, ArrayList<ArrayList<Integer>> prevEdges, int[][] minCapacities, int[][] edges) {
         for(int i = 0; i< minCapacity.length; i++){
             int demand = minCapacity[i];
-            int nextEdge = ints[i];
+            int nextEdge = reversEdgeLookup[i];
             flow = checkAndUpdateFlow(flow, demand, nextEdge,flows, prevEdges, minCapacities, edges);
             if(flow<0){
                     return false;
@@ -46,7 +46,9 @@ public class NaiveCirculation {
     private int checkAndUpdateFlow(int flow, int demand, int nextEdge, int[] flows, ArrayList<ArrayList<Integer>> prevEdges, int[][] minCapacities, int[][] edges) {
         if(flow<demand){
             int newFlow = flow+demand;
-            if(getFlowFromPrevEdges(nextEdge, nextEdge,newFlow,flows, prevEdges, minCapacities, edges)==newFlow){
+            int flowFromPrevEdges = getFlowFromPrevEdges(nextEdge, nextEdge,newFlow,flows, prevEdges, minCapacities, edges);
+            // FIXME: 5/5/18 this is always coming out false. why?
+            if(flowFromPrevEdges==newFlow){
                 flow=newFlow;
             } else {
                 return -1; //fail if previous min cpacities don't allow flow
@@ -85,16 +87,20 @@ public class NaiveCirculation {
         }
         int availFromPrevEdges = 0; //this will be the sum of all the flow we can get from the previous edges
         List<Integer> prevEdge = prevEdges.get(edgeNum);
-        if(edgeNum==firstEdge) { // if the edgeNum is firstEdge we have a circuit and we're done
-            for (int e : prevEdge) {
-                availFromPrevEdges += getFlowFromPrevEdges(firstEdge,edgeNum, newFlow, flows, prevEdges, minCapacities, edges);
-                if (availFromPrevEdges >= newFlow) {
-                    availFromPrevEdges = newFlow;
-                    break;
-                }
-            }
-        }
-        newFlow=newFlow>availFromPrevEdges?newFlow:availFromPrevEdges;
+        //for each previous edge
+        // if edge has remaining flow
+        //    add edge to queue
+        //    add remaining flow to
+
+
+//        for (int e : prevEdge) {
+//            availFromPrevEdges += getFlowFromPrevEdges(firstEdge,edgeNum, newFlow, flows, prevEdges, minCapacities, edges);
+//            if (availFromPrevEdges >= newFlow) {
+//                availFromPrevEdges = newFlow;
+//                break;
+//            }
+//        }
+         newFlow=newFlow>availFromPrevEdges?newFlow:availFromPrevEdges;
         if(availableFlow<newFlow){
             flows[edgeNum]=thisEdgeMinCapacity;
             return availableFlow;
